@@ -15,7 +15,10 @@
 		85E455601E24892D00F3AC6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E4555E1E24892D00F3AC6E /* LaunchScreen.storyboard */; };
 		85E4556A1E24903200F3AC6E /* qr_code_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E455681E24903200F3AC6E /* qr_code_line@2x.png */; };
 		85E4556B1E24903200F3AC6E /* qr_pick_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E455691E24903200F3AC6E /* qr_pick_bg@2x.png */; };
-		85E4556E1E24A82000F3AC6E /* SYLJQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E4556D1E24A82000F3AC6E /* SYLJQRCodeViewController.m */; };
+		85E455891E24DED300F3AC6E /* SYLJQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455861E24DED300F3AC6E /* SYLJQRCodeViewController.m */; };
+		85E4558A1E24DED300F3AC6E /* SYLJScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455881E24DED300F3AC6E /* SYLJScanQRCodeViewController.m */; };
+		85E455901E24DF1C00F3AC6E /* qr_code_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E4558E1E24DF1C00F3AC6E /* qr_code_line@2x.png */; };
+		85E455911E24DF1C00F3AC6E /* qr_pick_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E4558F1E24DF1C00F3AC6E /* qr_pick_bg@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +34,13 @@
 		85E455611E24892D00F3AC6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85E455681E24903200F3AC6E /* qr_code_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_code_line@2x.png"; sourceTree = "<group>"; };
 		85E455691E24903200F3AC6E /* qr_pick_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_pick_bg@2x.png"; sourceTree = "<group>"; };
-		85E4556C1E24A82000F3AC6E /* SYLJQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJQRCodeViewController.h; sourceTree = "<group>"; };
-		85E4556D1E24A82000F3AC6E /* SYLJQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJQRCodeViewController.m; sourceTree = "<group>"; };
+		85E455851E24DED300F3AC6E /* SYLJQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJQRCodeViewController.h; sourceTree = "<group>"; };
+		85E455861E24DED300F3AC6E /* SYLJQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJQRCodeViewController.m; sourceTree = "<group>"; };
+		85E455871E24DED300F3AC6E /* SYLJScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJScanQRCodeViewController.h; sourceTree = "<group>"; };
+		85E455881E24DED300F3AC6E /* SYLJScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJScanQRCodeViewController.m; sourceTree = "<group>"; };
+		85E4558E1E24DF1C00F3AC6E /* qr_code_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_code_line@2x.png"; sourceTree = "<group>"; };
+		85E4558F1E24DF1C00F3AC6E /* qr_pick_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_pick_bg@2x.png"; sourceTree = "<group>"; };
+		85E455921E24DF5F00F3AC6E /* SYLJMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYLJMacro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +73,7 @@
 		85E4554F1E24892D00F3AC6E /* SYLJQRCode */ = {
 			isa = PBXGroup;
 			children = (
-				85E4556C1E24A82000F3AC6E /* SYLJQRCodeViewController.h */,
-				85E4556D1E24A82000F3AC6E /* SYLJQRCodeViewController.m */,
+				85E455841E24DED300F3AC6E /* Classes */,
 				85E455531E24892D00F3AC6E /* AppDelegate.h */,
 				85E455541E24892D00F3AC6E /* AppDelegate.m */,
 				85E455561E24892D00F3AC6E /* ViewController.h */,
@@ -75,6 +82,8 @@
 				85E4555C1E24892D00F3AC6E /* Assets.xcassets */,
 				85E4555E1E24892D00F3AC6E /* LaunchScreen.storyboard */,
 				85E455611E24892D00F3AC6E /* Info.plist */,
+				85E4558D1E24DF1C00F3AC6E /* Sources */,
+				85E4558B1E24DEF800F3AC6E /* Tools */,
 				85E455671E24903200F3AC6E /* Sources */,
 				85E455501E24892D00F3AC6E /* Supporting Files */,
 			);
@@ -94,6 +103,42 @@
 			children = (
 				85E455681E24903200F3AC6E /* qr_code_line@2x.png */,
 				85E455691E24903200F3AC6E /* qr_pick_bg@2x.png */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		85E455841E24DED300F3AC6E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				85E455851E24DED300F3AC6E /* SYLJQRCodeViewController.h */,
+				85E455861E24DED300F3AC6E /* SYLJQRCodeViewController.m */,
+				85E455871E24DED300F3AC6E /* SYLJScanQRCodeViewController.h */,
+				85E455881E24DED300F3AC6E /* SYLJScanQRCodeViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		85E4558B1E24DEF800F3AC6E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				85E4558C1E24DEF800F3AC6E /* Macrodefinition */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		85E4558C1E24DEF800F3AC6E /* Macrodefinition */ = {
+			isa = PBXGroup;
+			children = (
+				85E455921E24DF5F00F3AC6E /* SYLJMacro.h */,
+			);
+			path = Macrodefinition;
+			sourceTree = "<group>";
+		};
+		85E4558D1E24DF1C00F3AC6E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				85E4558E1E24DF1C00F3AC6E /* qr_code_line@2x.png */,
+				85E4558F1E24DF1C00F3AC6E /* qr_pick_bg@2x.png */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -161,6 +206,8 @@
 				85E4556B1E24903200F3AC6E /* qr_pick_bg@2x.png in Resources */,
 				85E455601E24892D00F3AC6E /* LaunchScreen.storyboard in Resources */,
 				85E4555D1E24892D00F3AC6E /* Assets.xcassets in Resources */,
+				85E455911E24DF1C00F3AC6E /* qr_pick_bg@2x.png in Resources */,
+				85E455901E24DF1C00F3AC6E /* qr_code_line@2x.png in Resources */,
 				85E4555B1E24892D00F3AC6E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,8 +219,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85E4556E1E24A82000F3AC6E /* SYLJQRCodeViewController.m in Sources */,
+				85E455891E24DED300F3AC6E /* SYLJQRCodeViewController.m in Sources */,
 				85E455581E24892D00F3AC6E /* ViewController.m in Sources */,
+				85E4558A1E24DED300F3AC6E /* SYLJScanQRCodeViewController.m in Sources */,
 				85E455551E24892D00F3AC6E /* AppDelegate.m in Sources */,
 				85E455521E24892D00F3AC6E /* main.m in Sources */,
 			);
