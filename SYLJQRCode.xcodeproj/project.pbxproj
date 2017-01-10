@@ -13,6 +13,8 @@
 		85E4555B1E24892D00F3AC6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E455591E24892D00F3AC6E /* Main.storyboard */; };
 		85E4555D1E24892D00F3AC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E4555C1E24892D00F3AC6E /* Assets.xcassets */; };
 		85E455601E24892D00F3AC6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E4555E1E24892D00F3AC6E /* LaunchScreen.storyboard */; };
+		85E4556A1E24903200F3AC6E /* qr_code_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E455681E24903200F3AC6E /* qr_code_line@2x.png */; };
+		85E4556B1E24903200F3AC6E /* qr_pick_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E455691E24903200F3AC6E /* qr_pick_bg@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		85E4555C1E24892D00F3AC6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85E4555F1E24892D00F3AC6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85E455611E24892D00F3AC6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85E455681E24903200F3AC6E /* qr_code_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_code_line@2x.png"; sourceTree = "<group>"; };
+		85E455691E24903200F3AC6E /* qr_pick_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_pick_bg@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 				85E4555C1E24892D00F3AC6E /* Assets.xcassets */,
 				85E4555E1E24892D00F3AC6E /* LaunchScreen.storyboard */,
 				85E455611E24892D00F3AC6E /* Info.plist */,
+				85E455671E24903200F3AC6E /* Sources */,
 				85E455501E24892D00F3AC6E /* Supporting Files */,
 			);
 			path = SYLJQRCode;
@@ -77,6 +82,15 @@
 				85E455511E24892D00F3AC6E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85E455671E24903200F3AC6E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				85E455681E24903200F3AC6E /* qr_code_line@2x.png */,
+				85E455691E24903200F3AC6E /* qr_pick_bg@2x.png */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +152,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E4556A1E24903200F3AC6E /* qr_code_line@2x.png in Resources */,
+				85E4556B1E24903200F3AC6E /* qr_pick_bg@2x.png in Resources */,
 				85E455601E24892D00F3AC6E /* LaunchScreen.storyboard in Resources */,
 				85E4555D1E24892D00F3AC6E /* Assets.xcassets in Resources */,
 				85E4555B1E24892D00F3AC6E /* Main.storyboard in Resources */,
@@ -310,6 +326,7 @@
 				85E455661E24892D00F3AC6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
