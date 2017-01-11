@@ -12,4 +12,6 @@
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
 
+#define K_VC_Y 64
+
 #endif /* SYLJMacro_h */
