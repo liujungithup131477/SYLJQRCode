@@ -10,4 +10,10 @@
 
 @implementation UIFont (SYLJAdd)
 
++ (UIFont *)fontWithSize:(CGFloat)size
+{
+    UIFont *font = [UIFont systemFontOfSize:size];
+    return font;
+}
+
 @end

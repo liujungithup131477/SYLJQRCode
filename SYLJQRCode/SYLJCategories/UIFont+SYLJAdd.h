@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+#define KFont(size) ([UIFont systemFontOfSize:size])
+
 @interface UIFont (SYLJAdd)
+
+/**
+ 创建并返回 UIFont 对象
+
+ @param size 字体大小
+ @return UIFont 对象
+ */
++ (UIFont *)fontWithSize:(CGFloat)size;
 
 @end
