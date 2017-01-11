@@ -9,9 +9,16 @@
 #import "SYLJScanQRCodeViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "SYLJMacro.h"
+#import "UIView+YYAdd.h"
+#import "UIColor+YYAdd.h"
+#import "UILabel+SYLJAdd.h"
+#import "UIFont+SYLJAdd.h"
+
+#define QR_BORDER_SPACING 15
 
 @interface SYLJScanQRCodeViewController () <AVCaptureMetadataOutputObjectsDelegate>
 
+// MARK: - scan (二维码扫描相关)
 /**
  Capture:捕获
  //捕获设备，通常是前置摄像头，后置摄像头，麦克风（音频输入）
@@ -40,9 +47,16 @@
  */
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *previewLayer;
 
+// MARK: - setup view
+@property (nonatomic, strong) UIImageView *lineView;
+@property (nonatomic, weak) UIImageView *scanBg;
+
 @end
 
 @implementation SYLJScanQRCodeViewController
+
+#pragma mark -
+#pragma mark - Life cycle methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -55,6 +69,85 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - 
+#pragma mark - setup view
+
+-(void)initView
+{
+    UIImageView* scanBg = [[UIImageView alloc] initWithFrame:CGRectMake((kScreenWidth - 450 / 2) / 2, K_VC_Y + 216 / 2, 450 / 2, 450 / 2)];
+    scanBg.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:scanBg];
+    self.scanBg = scanBg;
+
+    UIImageView*  LeftUp = [[UIImageView alloc] init];
+    LeftUp.image = [UIImage imageNamed:@"juxingjiaoleftup"];
+    LeftUp.frame = CGRectMake(scanBg.left - LeftUp.image.size.width, scanBg.top - LeftUp.image.size.height, LeftUp.image.size.width, LeftUp.image.size.height);
+    LeftUp.top += QR_BORDER_SPACING;
+    LeftUp.left += QR_BORDER_SPACING;
+    [self.view addSubview:LeftUp];
+
+    UIImageView*  rightUp = [[UIImageView alloc] init];
+    rightUp.image = [UIImage imageNamed:@"juxingjiaorightup"];
+    rightUp.frame = CGRectMake(scanBg.right, scanBg.top - rightUp.image.size.height, rightUp.image.size.width, rightUp.image.size.height);
+    rightUp.top += QR_BORDER_SPACING;
+    rightUp.left -= QR_BORDER_SPACING;
+    [self.view addSubview:rightUp];
+    
+    UIImageView*  leftDown = [[UIImageView alloc] init];
+    leftDown.image = [UIImage imageNamed:@"juxingjiaoleftdown"];
+    leftDown.frame = CGRectMake(scanBg.left - leftDown.image.size.width, scanBg.bottom, leftDown.image.size.width, leftDown.image.size.height);
+    leftDown.top -= QR_BORDER_SPACING;
+    leftDown.left += QR_BORDER_SPACING;
+    [self.view addSubview:leftDown];
+    
+    UIImageView*  rightDown = [[UIImageView alloc] init];
+    rightDown.image = [UIImage imageNamed:@"juxingjiaorightdown"];
+    rightDown.frame = CGRectMake(scanBg.right, scanBg.bottom, rightDown.image.size.width, rightDown.image.size.height);
+    rightDown.top -= QR_BORDER_SPACING;
+    rightDown.left -= QR_BORDER_SPACING;
+    [self.view addSubview:rightDown];
+    
+    [scanBg addSubview:self.lineView];
+
+    UIView* leftBg = [[UIView alloc] initWithFrame:CGRectMake(0, K_VC_Y, scanBg.left, kScreenHeight - K_VC_Y)];
+    leftBg.backgroundColor = UIColorRGBA(0, 0, 0, 0.7);
+    [self.view addSubview:leftBg];
+
+    UIView*  rightBg = [[UIView alloc] initWithFrame:CGRectMake(scanBg.right, K_VC_Y, kScreenWidth-scanBg.right, kScreenHeight - K_VC_Y)];
+    rightBg.backgroundColor = UIColorRGBA(0, 0, 0, 0.7);
+    [self.view addSubview:rightBg];
+
+    UIView*  upBg = [[UIView alloc] initWithFrame:CGRectMake(scanBg.left, K_VC_Y, scanBg.width, scanBg.top - K_VC_Y)];
+    upBg.backgroundColor = UIColorRGBA(0, 0, 0, 0.7);
+    [self.view addSubview:upBg];
+
+    UIView*  downBg = [[UIView alloc] initWithFrame:CGRectMake(scanBg.left, scanBg.bottom, scanBg.width, kScreenHeight - scanBg.bottom)];
+    downBg.backgroundColor = UIColorRGBA(0, 0, 0, 0.7);
+    [self.view addSubview:downBg];
+    
+    UILabel *tipLabel = [UILabel labelWithText:@"请将扫描区对准二维码" fontSize:16.0f textColor:UIColorRGBA(255, 255, 255, 1) frame:CGRectMake(0, scanBg.bottom + 10, kScreenWidth, KFont(16).lineHeight)];
+    [self.view addSubview:tipLabel];
+    
+    [self beginAnimate];
+}
+
+-(void)beginAnimate
+{
+    int offsetY = self.lineView.frame.origin.y;
+    [UIView animateWithDuration:0.06f animations:^(void) {
+        int index = offsetY + 6;
+        if (index >= 450/2)
+        {
+            index = 0;
+        }
+        self.lineView.frame = CGRectMake(self.lineView.frame.origin.x, index, self.lineView.frame.size.width, self.lineView.frame.size.height);
+    } completion:^(BOOL finished) {
+        [self beginAnimate];
+    }];
+}
+
+#pragma mark - 
+#pragma mark - scan QR Code
 - (void)creatCaptureDevice
 {
     //使用AVMediaTypeVideo 指明self.device代表视频，默认使用后置摄像头进行初始化
@@ -95,6 +188,19 @@
     
     //开始启动
     [self.session startRunning];
+}
+
+#pragma mark -
+#pragma mark - setter & getter
+- (UIImageView *)lineView
+{
+    if (_lineView == nil) {
+        _lineView = [[UIImageView alloc] init];
+        UIImage *imageLine = [UIImage imageNamed:@"erweimasaomatiao"];
+        _lineView.frame = CGRectMake((self.scanBg.width - imageLine.size.width) / 2, 0, imageLine.size.width, imageLine.size.height);
+        _lineView.image = imageLine;
+    }
+    return _lineView;
 }
 
 @end
