@@ -7,30 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81B006DD18EF3CBEFCC43B39 /* libPods-SYLJQRCode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6390BD9EDFD12DE93A609767 /* libPods-SYLJQRCode.a */; };
+		852772561E26139C00597B62 /* SYLJQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 852772551E26139C00597B62 /* SYLJQRCode.bundle */; };
 		85E455521E24892D00F3AC6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455511E24892D00F3AC6E /* main.m */; };
 		85E455551E24892D00F3AC6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455541E24892D00F3AC6E /* AppDelegate.m */; };
 		85E455581E24892D00F3AC6E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455571E24892D00F3AC6E /* ViewController.m */; };
 		85E4555B1E24892D00F3AC6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E455591E24892D00F3AC6E /* Main.storyboard */; };
 		85E4555D1E24892D00F3AC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E4555C1E24892D00F3AC6E /* Assets.xcassets */; };
 		85E455601E24892D00F3AC6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E4555E1E24892D00F3AC6E /* LaunchScreen.storyboard */; };
-		85E4556A1E24903200F3AC6E /* qr_code_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E455681E24903200F3AC6E /* qr_code_line@2x.png */; };
-		85E4556B1E24903200F3AC6E /* qr_pick_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E455691E24903200F3AC6E /* qr_pick_bg@2x.png */; };
 		85E455891E24DED300F3AC6E /* SYLJQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455861E24DED300F3AC6E /* SYLJQRCodeViewController.m */; };
 		85E4558A1E24DED300F3AC6E /* SYLJScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455881E24DED300F3AC6E /* SYLJScanQRCodeViewController.m */; };
-		85E455901E24DF1C00F3AC6E /* qr_code_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E4558E1E24DF1C00F3AC6E /* qr_code_line@2x.png */; };
-		85E455911E24DF1C00F3AC6E /* qr_pick_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E4558F1E24DF1C00F3AC6E /* qr_pick_bg@2x.png */; };
-		85E455971E25C70000F3AC6E /* juxingjiaoleftdown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E455931E25C70000F3AC6E /* juxingjiaoleftdown@2x.png */; };
-		85E455981E25C70000F3AC6E /* juxingjiaoleftup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E455941E25C70000F3AC6E /* juxingjiaoleftup@2x.png */; };
-		85E455991E25C70000F3AC6E /* juxingjiaorightdown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E455951E25C70000F3AC6E /* juxingjiaorightdown@2x.png */; };
-		85E4559A1E25C70000F3AC6E /* juxingjiaorightup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E455961E25C70000F3AC6E /* juxingjiaorightup@2x.png */; };
-		85E4559C1E25C85400F3AC6E /* erweimasaomatiao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E4559B1E25C85400F3AC6E /* erweimasaomatiao@2x.png */; };
 		85E455A01E26020700F3AC6E /* UILabel+SYLJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E4559F1E26020700F3AC6E /* UILabel+SYLJAdd.m */; };
 		85E455A31E2606EA00F3AC6E /* UIFont+SYLJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455A21E2606EA00F3AC6E /* UIFont+SYLJAdd.m */; };
-		D49A48C6DE67AD0E109202BA /* libPods-SYLJQRCode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D5C333C9E678FB35944C68F /* libPods-SYLJQRCode.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1EECBE811DEC3BCD7ECF2F85 /* Pods-SYLJQRCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYLJQRCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SYLJQRCode/Pods-SYLJQRCode.debug.xcconfig"; sourceTree = "<group>"; };
+		57AA9E13C15E43666C59DEB9 /* Pods-SYLJQRCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYLJQRCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-SYLJQRCode/Pods-SYLJQRCode.release.xcconfig"; sourceTree = "<group>"; };
+		6390BD9EDFD12DE93A609767 /* libPods-SYLJQRCode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SYLJQRCode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		852772551E26139C00597B62 /* SYLJQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SYLJQRCode.bundle; sourceTree = "<group>"; };
 		85E4554D1E24892D00F3AC6E /* SYLJQRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYLJQRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E455511E24892D00F3AC6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		85E455531E24892D00F3AC6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,26 +35,16 @@
 		85E4555C1E24892D00F3AC6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85E4555F1E24892D00F3AC6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85E455611E24892D00F3AC6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85E455681E24903200F3AC6E /* qr_code_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_code_line@2x.png"; sourceTree = "<group>"; };
-		85E455691E24903200F3AC6E /* qr_pick_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_pick_bg@2x.png"; sourceTree = "<group>"; };
 		85E455851E24DED300F3AC6E /* SYLJQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJQRCodeViewController.h; sourceTree = "<group>"; };
 		85E455861E24DED300F3AC6E /* SYLJQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJQRCodeViewController.m; sourceTree = "<group>"; };
 		85E455871E24DED300F3AC6E /* SYLJScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJScanQRCodeViewController.h; sourceTree = "<group>"; };
 		85E455881E24DED300F3AC6E /* SYLJScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJScanQRCodeViewController.m; sourceTree = "<group>"; };
-		85E4558E1E24DF1C00F3AC6E /* qr_code_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_code_line@2x.png"; sourceTree = "<group>"; };
-		85E4558F1E24DF1C00F3AC6E /* qr_pick_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_pick_bg@2x.png"; sourceTree = "<group>"; };
 		85E455921E24DF5F00F3AC6E /* SYLJMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYLJMacro.h; sourceTree = "<group>"; };
-		85E455931E25C70000F3AC6E /* juxingjiaoleftdown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "juxingjiaoleftdown@2x.png"; sourceTree = "<group>"; };
-		85E455941E25C70000F3AC6E /* juxingjiaoleftup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "juxingjiaoleftup@2x.png"; sourceTree = "<group>"; };
-		85E455951E25C70000F3AC6E /* juxingjiaorightdown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "juxingjiaorightdown@2x.png"; sourceTree = "<group>"; };
-		85E455961E25C70000F3AC6E /* juxingjiaorightup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "juxingjiaorightup@2x.png"; sourceTree = "<group>"; };
-		85E4559B1E25C85400F3AC6E /* erweimasaomatiao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "erweimasaomatiao@2x.png"; sourceTree = "<group>"; };
 		85E4559E1E26020700F3AC6E /* UILabel+SYLJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SYLJAdd.h"; sourceTree = "<group>"; };
 		85E4559F1E26020700F3AC6E /* UILabel+SYLJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SYLJAdd.m"; sourceTree = "<group>"; };
 		85E455A11E2606EA00F3AC6E /* UIFont+SYLJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SYLJAdd.h"; sourceTree = "<group>"; };
 		85E455A21E2606EA00F3AC6E /* UIFont+SYLJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+SYLJAdd.m"; sourceTree = "<group>"; };
-		9D5C333C9E678FB35944C68F /* libPods-SYLJQRCode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SYLJQRCode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C62B82F06B45289BB4506853 /* Pods-SYLJQRCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYLJQRCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-SYLJQRCode/Pods-SYLJQRCode.release.xcconfig"; sourceTree = "<group>"; };
+		9559F1132BBB9AA105ABC1F3 /* Pods-SYLJQRCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYLJQRCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SYLJQRCode/Pods-SYLJQRCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,20 +52,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D49A48C6DE67AD0E109202BA /* libPods-SYLJQRCode.a in Frameworks */,
+				81B006DD18EF3CBEFCC43B39 /* libPods-SYLJQRCode.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1723FED60013F572EC3FBF01 /* Pods */ = {
+		206544AF405B8E187144A947 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1EECBE811DEC3BCD7ECF2F85 /* Pods-SYLJQRCode.debug.xcconfig */,
-				C62B82F06B45289BB4506853 /* Pods-SYLJQRCode.release.xcconfig */,
+				9559F1132BBB9AA105ABC1F3 /* Pods-SYLJQRCode.debug.xcconfig */,
+				57AA9E13C15E43666C59DEB9 /* Pods-SYLJQRCode.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		27C88F44535CD8AB570B8E45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6390BD9EDFD12DE93A609767 /* libPods-SYLJQRCode.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		85E455441E24892D00F3AC6E = {
@@ -89,8 +81,8 @@
 			children = (
 				85E4554F1E24892D00F3AC6E /* SYLJQRCode */,
 				85E4554E1E24892D00F3AC6E /* Products */,
-				1723FED60013F572EC3FBF01 /* Pods */,
-				FF96CC24CC308969783B05A6 /* Frameworks */,
+				206544AF405B8E187144A947 /* Pods */,
+				27C88F44535CD8AB570B8E45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +97,7 @@
 		85E4554F1E24892D00F3AC6E /* SYLJQRCode */ = {
 			isa = PBXGroup;
 			children = (
+				852772551E26139C00597B62 /* SYLJQRCode.bundle */,
 				85E455841E24DED300F3AC6E /* Classes */,
 				85E455531E24892D00F3AC6E /* AppDelegate.h */,
 				85E455541E24892D00F3AC6E /* AppDelegate.m */,
@@ -114,10 +107,8 @@
 				85E4555C1E24892D00F3AC6E /* Assets.xcassets */,
 				85E4555E1E24892D00F3AC6E /* LaunchScreen.storyboard */,
 				85E455611E24892D00F3AC6E /* Info.plist */,
-				85E4558D1E24DF1C00F3AC6E /* Sources */,
 				85E4559D1E2600E500F3AC6E /* SYLJCategories */,
 				85E4558B1E24DEF800F3AC6E /* Tools */,
-				85E455671E24903200F3AC6E /* Sources */,
 				85E455501E24892D00F3AC6E /* Supporting Files */,
 			);
 			path = SYLJQRCode;
@@ -129,15 +120,6 @@
 				85E455511E24892D00F3AC6E /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		85E455671E24903200F3AC6E /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				85E455681E24903200F3AC6E /* qr_code_line@2x.png */,
-				85E455691E24903200F3AC6E /* qr_pick_bg@2x.png */,
-			);
-			path = Sources;
 			sourceTree = "<group>";
 		};
 		85E455841E24DED300F3AC6E /* Classes */ = {
@@ -167,20 +149,6 @@
 			path = Macrodefinition;
 			sourceTree = "<group>";
 		};
-		85E4558D1E24DF1C00F3AC6E /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				85E4559B1E25C85400F3AC6E /* erweimasaomatiao@2x.png */,
-				85E455931E25C70000F3AC6E /* juxingjiaoleftdown@2x.png */,
-				85E455941E25C70000F3AC6E /* juxingjiaoleftup@2x.png */,
-				85E455951E25C70000F3AC6E /* juxingjiaorightdown@2x.png */,
-				85E455961E25C70000F3AC6E /* juxingjiaorightup@2x.png */,
-				85E4558E1E24DF1C00F3AC6E /* qr_code_line@2x.png */,
-				85E4558F1E24DF1C00F3AC6E /* qr_pick_bg@2x.png */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
 		85E4559D1E2600E500F3AC6E /* SYLJCategories */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,14 +160,6 @@
 			path = SYLJCategories;
 			sourceTree = "<group>";
 		};
-		FF96CC24CC308969783B05A6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9D5C333C9E678FB35944C68F /* libPods-SYLJQRCode.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -207,12 +167,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85E455641E24892D00F3AC6E /* Build configuration list for PBXNativeTarget "SYLJQRCode" */;
 			buildPhases = (
-				9E544B22B6AB5B8BC02FDFE2 /* Check Pods Manifest.lock */,
+				5DBDB6FC073CE21A075A43CB /* [CP] Check Pods Manifest.lock */,
 				85E455491E24892D00F3AC6E /* Sources */,
 				85E4554A1E24892D00F3AC6E /* Frameworks */,
 				85E4554B1E24892D00F3AC6E /* Resources */,
-				011E2C149BFBCD672920A351 /* Embed Pods Frameworks */,
-				478BAAFF209F4C634F49A640 /* Copy Pods Resources */,
+				03F7B69FF9205BF52834869C /* [CP] Embed Pods Frameworks */,
+				94B65697B57B9FFD794A81EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,32 +222,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85E4556A1E24903200F3AC6E /* qr_code_line@2x.png in Resources */,
-				85E455971E25C70000F3AC6E /* juxingjiaoleftdown@2x.png in Resources */,
-				85E4556B1E24903200F3AC6E /* qr_pick_bg@2x.png in Resources */,
 				85E455601E24892D00F3AC6E /* LaunchScreen.storyboard in Resources */,
-				85E4559C1E25C85400F3AC6E /* erweimasaomatiao@2x.png in Resources */,
 				85E4555D1E24892D00F3AC6E /* Assets.xcassets in Resources */,
-				85E455911E24DF1C00F3AC6E /* qr_pick_bg@2x.png in Resources */,
-				85E4559A1E25C70000F3AC6E /* juxingjiaorightup@2x.png in Resources */,
-				85E455901E24DF1C00F3AC6E /* qr_code_line@2x.png in Resources */,
 				85E4555B1E24892D00F3AC6E /* Main.storyboard in Resources */,
-				85E455981E25C70000F3AC6E /* juxingjiaoleftup@2x.png in Resources */,
-				85E455991E25C70000F3AC6E /* juxingjiaorightdown@2x.png in Resources */,
+				852772561E26139C00597B62 /* SYLJQRCode.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		011E2C149BFBCD672920A351 /* Embed Pods Frameworks */ = {
+		03F7B69FF9205BF52834869C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,34 +247,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SYLJQRCode/Pods-SYLJQRCode-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		478BAAFF209F4C634F49A640 /* Copy Pods Resources */ = {
+		5DBDB6FC073CE21A075A43CB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		94B65697B57B9FFD794A81EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SYLJQRCode/Pods-SYLJQRCode-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9E544B22B6AB5B8BC02FDFE2 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -454,7 +406,7 @@
 		};
 		85E455651E24892D00F3AC6E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EECBE811DEC3BCD7ECF2F85 /* Pods-SYLJQRCode.debug.xcconfig */;
+			baseConfigurationReference = 9559F1132BBB9AA105ABC1F3 /* Pods-SYLJQRCode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5KGS3CDGJG;
@@ -467,7 +419,7 @@
 		};
 		85E455661E24892D00F3AC6E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C62B82F06B45289BB4506853 /* Pods-SYLJQRCode.release.xcconfig */;
+			baseConfigurationReference = 57AA9E13C15E43666C59DEB9 /* Pods-SYLJQRCode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5KGS3CDGJG;

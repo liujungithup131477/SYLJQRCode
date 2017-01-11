@@ -60,8 +60,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
+    [self initView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,28 +80,28 @@
     self.scanBg = scanBg;
 
     UIImageView*  LeftUp = [[UIImageView alloc] init];
-    LeftUp.image = [UIImage imageNamed:@"juxingjiaoleftup"];
+    LeftUp.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"juxingjiaoleftup" ofType:@"png" inDirectory:@"SYLJQRCode.bundle"]];//[UIImage imageNamed:@"juxingjiaoleftup"];
     LeftUp.frame = CGRectMake(scanBg.left - LeftUp.image.size.width, scanBg.top - LeftUp.image.size.height, LeftUp.image.size.width, LeftUp.image.size.height);
     LeftUp.top += QR_BORDER_SPACING;
     LeftUp.left += QR_BORDER_SPACING;
     [self.view addSubview:LeftUp];
 
     UIImageView*  rightUp = [[UIImageView alloc] init];
-    rightUp.image = [UIImage imageNamed:@"juxingjiaorightup"];
+    rightUp.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"juxingjiaorightup" ofType:@"png" inDirectory:@"SYLJQRCode.bundle"]];//[UIImage imageNamed:@"juxingjiaorightup"];
     rightUp.frame = CGRectMake(scanBg.right, scanBg.top - rightUp.image.size.height, rightUp.image.size.width, rightUp.image.size.height);
     rightUp.top += QR_BORDER_SPACING;
     rightUp.left -= QR_BORDER_SPACING;
     [self.view addSubview:rightUp];
     
     UIImageView*  leftDown = [[UIImageView alloc] init];
-    leftDown.image = [UIImage imageNamed:@"juxingjiaoleftdown"];
+    leftDown.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"juxingjiaoleftdown" ofType:@"png" inDirectory:@"SYLJQRCode.bundle"]];//[UIImage imageNamed:@"juxingjiaoleftdown"];
     leftDown.frame = CGRectMake(scanBg.left - leftDown.image.size.width, scanBg.bottom, leftDown.image.size.width, leftDown.image.size.height);
     leftDown.top -= QR_BORDER_SPACING;
     leftDown.left += QR_BORDER_SPACING;
     [self.view addSubview:leftDown];
     
     UIImageView*  rightDown = [[UIImageView alloc] init];
-    rightDown.image = [UIImage imageNamed:@"juxingjiaorightdown"];
+    rightDown.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"juxingjiaorightdown" ofType:@"png" inDirectory:@"SYLJQRCode.bundle"]];//[UIImage imageNamed:@"juxingjiaorightdown"];
     rightDown.frame = CGRectMake(scanBg.right, scanBg.bottom, rightDown.image.size.width, rightDown.image.size.height);
     rightDown.top -= QR_BORDER_SPACING;
     rightDown.left -= QR_BORDER_SPACING;
@@ -196,7 +196,7 @@
 {
     if (_lineView == nil) {
         _lineView = [[UIImageView alloc] init];
-        UIImage *imageLine = [UIImage imageNamed:@"erweimasaomatiao"];
+        UIImage *imageLine = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"erweimasaomatiao" ofType:@"png" inDirectory:@"SYLJQRCode.bundle"]];//[UIImage imageNamed:@"erweimasaomatiao"];
         _lineView.frame = CGRectMake((self.scanBg.width - imageLine.size.width) / 2, 0, imageLine.size.width, imageLine.size.height);
         _lineView.image = imageLine;
     }
