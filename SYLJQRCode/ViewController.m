@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SYLJScanQRCodeViewController.h"
 
 @interface ViewController ()
 
@@ -16,9 +17,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:@"扫一扫" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    btn.frame = CGRectMake(100, 300, 100, 30);
+    btn.backgroundColor = [UIColor purpleColor];
+    [btn addTarget:self action:@selector(scan) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 }
 
+- (void)scan
+{
+    SYLJScanQRCodeViewController *scanQRVC = [SYLJScanQRCodeViewController new];
+    [self presentViewController:scanQRVC animated:YES completion:NULL];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

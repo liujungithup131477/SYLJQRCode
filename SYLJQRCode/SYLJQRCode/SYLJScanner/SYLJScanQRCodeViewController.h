@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
+/**
+ 二维码扫描控制器
+ */
 @interface SYLJScanQRCodeViewController : UIViewController
 
 @end
