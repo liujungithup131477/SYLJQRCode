@@ -8,23 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		81B006DD18EF3CBEFCC43B39 /* libPods-SYLJQRCode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6390BD9EDFD12DE93A609767 /* libPods-SYLJQRCode.a */; };
-		852772561E26139C00597B62 /* SYLJQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 852772551E26139C00597B62 /* SYLJQRCode.bundle */; };
+		852772DB1E28B82500597B62 /* UIFont+SYLJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 852772CF1E28B82500597B62 /* UIFont+SYLJAdd.m */; };
+		852772DC1E28B82500597B62 /* UILabel+SYLJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 852772D11E28B82500597B62 /* UILabel+SYLJAdd.m */; };
+		852772DD1E28B82500597B62 /* SYLJQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 852772D31E28B82500597B62 /* SYLJQRCode.bundle */; };
+		852772DE1E28B82500597B62 /* SYLJQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852772D51E28B82500597B62 /* SYLJQRCodeViewController.m */; };
+		852772DF1E28B82500597B62 /* SYLJScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852772D71E28B82500597B62 /* SYLJScanQRCodeViewController.m */; };
 		85E455521E24892D00F3AC6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455511E24892D00F3AC6E /* main.m */; };
 		85E455551E24892D00F3AC6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455541E24892D00F3AC6E /* AppDelegate.m */; };
 		85E455581E24892D00F3AC6E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455571E24892D00F3AC6E /* ViewController.m */; };
 		85E4555B1E24892D00F3AC6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E455591E24892D00F3AC6E /* Main.storyboard */; };
 		85E4555D1E24892D00F3AC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E4555C1E24892D00F3AC6E /* Assets.xcassets */; };
 		85E455601E24892D00F3AC6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E4555E1E24892D00F3AC6E /* LaunchScreen.storyboard */; };
-		85E455891E24DED300F3AC6E /* SYLJQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455861E24DED300F3AC6E /* SYLJQRCodeViewController.m */; };
-		85E4558A1E24DED300F3AC6E /* SYLJScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455881E24DED300F3AC6E /* SYLJScanQRCodeViewController.m */; };
-		85E455A01E26020700F3AC6E /* UILabel+SYLJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E4559F1E26020700F3AC6E /* UILabel+SYLJAdd.m */; };
-		85E455A31E2606EA00F3AC6E /* UIFont+SYLJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455A21E2606EA00F3AC6E /* UIFont+SYLJAdd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		57AA9E13C15E43666C59DEB9 /* Pods-SYLJQRCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYLJQRCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-SYLJQRCode/Pods-SYLJQRCode.release.xcconfig"; sourceTree = "<group>"; };
 		6390BD9EDFD12DE93A609767 /* libPods-SYLJQRCode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SYLJQRCode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		852772551E26139C00597B62 /* SYLJQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SYLJQRCode.bundle; sourceTree = "<group>"; };
+		852772CE1E28B82500597B62 /* UIFont+SYLJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SYLJAdd.h"; sourceTree = "<group>"; };
+		852772CF1E28B82500597B62 /* UIFont+SYLJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+SYLJAdd.m"; sourceTree = "<group>"; };
+		852772D01E28B82500597B62 /* UILabel+SYLJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SYLJAdd.h"; sourceTree = "<group>"; };
+		852772D11E28B82500597B62 /* UILabel+SYLJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SYLJAdd.m"; sourceTree = "<group>"; };
+		852772D31E28B82500597B62 /* SYLJQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SYLJQRCode.bundle; sourceTree = "<group>"; };
+		852772D41E28B82500597B62 /* SYLJQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJQRCodeViewController.h; sourceTree = "<group>"; };
+		852772D51E28B82500597B62 /* SYLJQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJQRCodeViewController.m; sourceTree = "<group>"; };
+		852772D61E28B82500597B62 /* SYLJScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJScanQRCodeViewController.h; sourceTree = "<group>"; };
+		852772D71E28B82500597B62 /* SYLJScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJScanQRCodeViewController.m; sourceTree = "<group>"; };
+		852772DA1E28B82500597B62 /* SYLJMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJMacro.h; sourceTree = "<group>"; };
 		85E4554D1E24892D00F3AC6E /* SYLJQRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYLJQRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E455511E24892D00F3AC6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		85E455531E24892D00F3AC6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,15 +44,6 @@
 		85E4555C1E24892D00F3AC6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85E4555F1E24892D00F3AC6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85E455611E24892D00F3AC6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85E455851E24DED300F3AC6E /* SYLJQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJQRCodeViewController.h; sourceTree = "<group>"; };
-		85E455861E24DED300F3AC6E /* SYLJQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJQRCodeViewController.m; sourceTree = "<group>"; };
-		85E455871E24DED300F3AC6E /* SYLJScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJScanQRCodeViewController.h; sourceTree = "<group>"; };
-		85E455881E24DED300F3AC6E /* SYLJScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJScanQRCodeViewController.m; sourceTree = "<group>"; };
-		85E455921E24DF5F00F3AC6E /* SYLJMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYLJMacro.h; sourceTree = "<group>"; };
-		85E4559E1E26020700F3AC6E /* UILabel+SYLJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SYLJAdd.h"; sourceTree = "<group>"; };
-		85E4559F1E26020700F3AC6E /* UILabel+SYLJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SYLJAdd.m"; sourceTree = "<group>"; };
-		85E455A11E2606EA00F3AC6E /* UIFont+SYLJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SYLJAdd.h"; sourceTree = "<group>"; };
-		85E455A21E2606EA00F3AC6E /* UIFont+SYLJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+SYLJAdd.m"; sourceTree = "<group>"; };
 		9559F1132BBB9AA105ABC1F3 /* Pods-SYLJQRCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYLJQRCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SYLJQRCode/Pods-SYLJQRCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +76,55 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		852772CC1E28B82500597B62 /* SYLJQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				852772CD1E28B82500597B62 /* SYLJCategories */,
+				852772D21E28B82500597B62 /* SYLJScanner */,
+				852772D81E28B82500597B62 /* SYLJTools */,
+			);
+			path = SYLJQRCode;
+			sourceTree = "<group>";
+		};
+		852772CD1E28B82500597B62 /* SYLJCategories */ = {
+			isa = PBXGroup;
+			children = (
+				852772CE1E28B82500597B62 /* UIFont+SYLJAdd.h */,
+				852772CF1E28B82500597B62 /* UIFont+SYLJAdd.m */,
+				852772D01E28B82500597B62 /* UILabel+SYLJAdd.h */,
+				852772D11E28B82500597B62 /* UILabel+SYLJAdd.m */,
+			);
+			path = SYLJCategories;
+			sourceTree = "<group>";
+		};
+		852772D21E28B82500597B62 /* SYLJScanner */ = {
+			isa = PBXGroup;
+			children = (
+				852772D31E28B82500597B62 /* SYLJQRCode.bundle */,
+				852772D41E28B82500597B62 /* SYLJQRCodeViewController.h */,
+				852772D51E28B82500597B62 /* SYLJQRCodeViewController.m */,
+				852772D61E28B82500597B62 /* SYLJScanQRCodeViewController.h */,
+				852772D71E28B82500597B62 /* SYLJScanQRCodeViewController.m */,
+			);
+			path = SYLJScanner;
+			sourceTree = "<group>";
+		};
+		852772D81E28B82500597B62 /* SYLJTools */ = {
+			isa = PBXGroup;
+			children = (
+				852772D91E28B82500597B62 /* Macrodefinition */,
+			);
+			path = SYLJTools;
+			sourceTree = "<group>";
+		};
+		852772D91E28B82500597B62 /* Macrodefinition */ = {
+			isa = PBXGroup;
+			children = (
+				852772DA1E28B82500597B62 /* SYLJMacro.h */,
+			);
+			path = Macrodefinition;
+			sourceTree = "<group>";
+		};
 		85E455441E24892D00F3AC6E = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +146,7 @@
 		85E4554F1E24892D00F3AC6E /* SYLJQRCode */ = {
 			isa = PBXGroup;
 			children = (
-				852772551E26139C00597B62 /* SYLJQRCode.bundle */,
-				85E455841E24DED300F3AC6E /* Classes */,
+				852772CC1E28B82500597B62 /* SYLJQRCode */,
 				85E455531E24892D00F3AC6E /* AppDelegate.h */,
 				85E455541E24892D00F3AC6E /* AppDelegate.m */,
 				85E455561E24892D00F3AC6E /* ViewController.h */,
@@ -107,8 +155,6 @@
 				85E4555C1E24892D00F3AC6E /* Assets.xcassets */,
 				85E4555E1E24892D00F3AC6E /* LaunchScreen.storyboard */,
 				85E455611E24892D00F3AC6E /* Info.plist */,
-				85E4559D1E2600E500F3AC6E /* SYLJCategories */,
-				85E4558B1E24DEF800F3AC6E /* Tools */,
 				85E455501E24892D00F3AC6E /* Supporting Files */,
 			);
 			path = SYLJQRCode;
@@ -120,44 +166,6 @@
 				85E455511E24892D00F3AC6E /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		85E455841E24DED300F3AC6E /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				85E455851E24DED300F3AC6E /* SYLJQRCodeViewController.h */,
-				85E455861E24DED300F3AC6E /* SYLJQRCodeViewController.m */,
-				85E455871E24DED300F3AC6E /* SYLJScanQRCodeViewController.h */,
-				85E455881E24DED300F3AC6E /* SYLJScanQRCodeViewController.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		85E4558B1E24DEF800F3AC6E /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				85E4558C1E24DEF800F3AC6E /* Macrodefinition */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
-		85E4558C1E24DEF800F3AC6E /* Macrodefinition */ = {
-			isa = PBXGroup;
-			children = (
-				85E455921E24DF5F00F3AC6E /* SYLJMacro.h */,
-			);
-			path = Macrodefinition;
-			sourceTree = "<group>";
-		};
-		85E4559D1E2600E500F3AC6E /* SYLJCategories */ = {
-			isa = PBXGroup;
-			children = (
-				85E4559E1E26020700F3AC6E /* UILabel+SYLJAdd.h */,
-				85E4559F1E26020700F3AC6E /* UILabel+SYLJAdd.m */,
-				85E455A11E2606EA00F3AC6E /* UIFont+SYLJAdd.h */,
-				85E455A21E2606EA00F3AC6E /* UIFont+SYLJAdd.m */,
-			);
-			path = SYLJCategories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,9 +231,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				85E455601E24892D00F3AC6E /* LaunchScreen.storyboard in Resources */,
+				852772DD1E28B82500597B62 /* SYLJQRCode.bundle in Resources */,
 				85E4555D1E24892D00F3AC6E /* Assets.xcassets in Resources */,
 				85E4555B1E24892D00F3AC6E /* Main.storyboard in Resources */,
-				852772561E26139C00597B62 /* SYLJQRCode.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,12 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85E455891E24DED300F3AC6E /* SYLJQRCodeViewController.m in Sources */,
+				852772DE1E28B82500597B62 /* SYLJQRCodeViewController.m in Sources */,
 				85E455581E24892D00F3AC6E /* ViewController.m in Sources */,
-				85E4558A1E24DED300F3AC6E /* SYLJScanQRCodeViewController.m in Sources */,
-				85E455A31E2606EA00F3AC6E /* UIFont+SYLJAdd.m in Sources */,
+				852772DC1E28B82500597B62 /* UILabel+SYLJAdd.m in Sources */,
 				85E455551E24892D00F3AC6E /* AppDelegate.m in Sources */,
-				85E455A01E26020700F3AC6E /* UILabel+SYLJAdd.m in Sources */,
+				852772DB1E28B82500597B62 /* UIFont+SYLJAdd.m in Sources */,
+				852772DF1E28B82500597B62 /* SYLJScanQRCodeViewController.m in Sources */,
 				85E455521E24892D00F3AC6E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
