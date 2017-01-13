@@ -20,7 +20,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self setupNavigationController];
+}
+
+- (void)setupNavigationController
+{
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(closeBtnClick)];
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor orangeColor];
+}
+
+- (void)closeBtnClick
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)didReceiveMemoryWarning {

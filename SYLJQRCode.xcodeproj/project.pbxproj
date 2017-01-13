@@ -12,6 +12,7 @@
 		852772DC1E28B82500597B62 /* UILabel+SYLJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 852772D11E28B82500597B62 /* UILabel+SYLJAdd.m */; };
 		852772DD1E28B82500597B62 /* SYLJQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 852772D31E28B82500597B62 /* SYLJQRCode.bundle */; };
 		852772DF1E28B82500597B62 /* SYLJScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852772D71E28B82500597B62 /* SYLJScanQRCodeViewController.m */; };
+		85B70DBF1E28D8AF0036327A /* SYLJQRCodeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B70DBE1E28D8AF0036327A /* SYLJQRCodeNavigationController.m */; };
 		85E455521E24892D00F3AC6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455511E24892D00F3AC6E /* main.m */; };
 		85E455551E24892D00F3AC6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455541E24892D00F3AC6E /* AppDelegate.m */; };
 		85E455581E24892D00F3AC6E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455571E24892D00F3AC6E /* ViewController.m */; };
@@ -31,6 +32,8 @@
 		852772D61E28B82500597B62 /* SYLJScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJScanQRCodeViewController.h; sourceTree = "<group>"; };
 		852772D71E28B82500597B62 /* SYLJScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJScanQRCodeViewController.m; sourceTree = "<group>"; };
 		852772DA1E28B82500597B62 /* SYLJMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJMacro.h; sourceTree = "<group>"; };
+		85B70DBD1E28D8AF0036327A /* SYLJQRCodeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJQRCodeNavigationController.h; sourceTree = "<group>"; };
+		85B70DBE1E28D8AF0036327A /* SYLJQRCodeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJQRCodeNavigationController.m; sourceTree = "<group>"; };
 		85E4554D1E24892D00F3AC6E /* SYLJQRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYLJQRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E455511E24892D00F3AC6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		85E455531E24892D00F3AC6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 				852772D31E28B82500597B62 /* SYLJQRCode.bundle */,
 				852772D61E28B82500597B62 /* SYLJScanQRCodeViewController.h */,
 				852772D71E28B82500597B62 /* SYLJScanQRCodeViewController.m */,
+				85B70DBD1E28D8AF0036327A /* SYLJQRCodeNavigationController.h */,
+				85B70DBE1E28D8AF0036327A /* SYLJQRCodeNavigationController.m */,
 			);
 			path = SYLJScanner;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B70DBF1E28D8AF0036327A /* SYLJQRCodeNavigationController.m in Sources */,
 				85E455581E24892D00F3AC6E /* ViewController.m in Sources */,
 				852772DC1E28B82500597B62 /* UILabel+SYLJAdd.m in Sources */,
 				85E455551E24892D00F3AC6E /* AppDelegate.m in Sources */,

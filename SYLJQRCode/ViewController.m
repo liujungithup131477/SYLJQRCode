@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "SYLJScanQRCodeViewController.h"
+#import "SYLJQRCodeNavigationController.h"
 
 @interface ViewController ()
 
@@ -29,8 +29,8 @@
 
 - (void)scan
 {
-    SYLJScanQRCodeViewController *scanQRVC = [SYLJScanQRCodeViewController new];
-    [self presentViewController:scanQRVC animated:YES completion:NULL];
+    SYLJQRCodeNavigationController *scanQRNaV = [SYLJQRCodeNavigationController scannerWithCompletion:nil];
+    [self presentViewController:scanQRNaV animated:YES completion:NULL];
 }
 
 - (void)didReceiveMemoryWarning {
