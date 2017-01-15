@@ -23,7 +23,6 @@
 
 #pragma mark -
 #pragma mark - Life cycle methods
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -33,6 +32,13 @@
     [self setupUI];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - 
+#pragma mark - Pravite methods (setup View)
 - (void)setupUI
 {
     [self setupScannerBorderView];
@@ -71,11 +77,6 @@
 - (void)closeBtnClick
 {
     [self dismissViewControllerAnimated:YES completion:NULL];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

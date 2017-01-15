@@ -27,15 +27,6 @@
     return self;
 }
 
-- (void)setupUI
-{
-    self.clipsToBounds = YES;
-    [self setupBgView];
-    [self setupScannerLine];
-    [self setupCornerView];
-    [self startScannerAnimating];
-}
-
 #pragma mark - 
 #pragma mark - Public methods
 - (void)startScannerAnimating
@@ -56,7 +47,7 @@
 }
 
 #pragma mark - 
-#pragma mark - setter
+#pragma mark - Setter
 - (UIImageView *)scannerLine
 {
     if (_scannerLine == nil) {
@@ -81,6 +72,14 @@
 
 #pragma mark - 
 #pragma mark - Pravite methods (setup View)
+- (void)setupUI
+{
+    self.clipsToBounds = YES;
+    [self setupBgView];
+    [self setupScannerLine];
+    [self setupCornerView];
+}
+
 - (void)setupBgView
 {
     [self addSubview:self.bgView];
