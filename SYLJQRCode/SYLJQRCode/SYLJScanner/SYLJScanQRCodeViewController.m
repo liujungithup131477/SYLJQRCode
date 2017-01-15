@@ -11,8 +11,6 @@
 #import "NSBundle+SYLJAdd.h"
 #import "SYLJMacro.h"
 
-#define KScannerWidth 280
-
 @interface SYLJScanQRCodeViewController ()
 
 @property (nonatomic, weak) UIView *scannerBorderView;

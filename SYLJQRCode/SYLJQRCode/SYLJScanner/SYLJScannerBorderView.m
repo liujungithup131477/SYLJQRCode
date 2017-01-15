@@ -83,7 +83,7 @@
 - (void)setupBgView
 {
     [self addSubview:self.bgView];
-    self.bgView.frame = CGRectMake(0, 0, 280, 280);
+    self.bgView.frame = CGRectMake(0, 0, KScannerWidth, KScannerWidth);
 }
 
 - (void)setupScannerLine

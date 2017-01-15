@@ -6,6 +6,8 @@
 //  Copyright © 2017年 刘俊. All rights reserved.
 //
 
+#define KScannerWidth 280 //扫描背景框宽度
+
 #import <UIKit/UIKit.h>
 
 /**
