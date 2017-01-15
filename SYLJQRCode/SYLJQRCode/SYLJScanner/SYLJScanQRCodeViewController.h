@@ -15,3 +15,4 @@
 @interface SYLJScanQRCodeViewController : UIViewController
 
 @end
+

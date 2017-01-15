@@ -7,6 +7,9 @@
 //
 
 #import "SYLJScanQRCodeViewController.h"
+#import "SYLJScannerBorderView.h"
+#import "NSString+SYLJAdd.h"
+#import "NSBundle+SYLJAdd.h"
 
 @interface SYLJScanQRCodeViewController ()
 
@@ -23,6 +26,25 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupNavigationController];
+    [self setupUI];
+}
+
+- (void)setupUI
+{
+    SYLJScannerBorderView *scannerBorderView = [[SYLJScannerBorderView alloc] init];
+    scannerBorderView.frame = CGRectMake(100, 200, 100, 100);
+    [self.view addSubview:scannerBorderView];
+    
+    NSString *str = @"juxingjiaoleftup.png";
+    NSString *nStr = [str stringByAppendingPathScale:2];
+    
+    NSString *b = [[NSBundle mainBundle] pathForScaledResource:@"juxingjiaoleftup" ofType:@"png" inDirectory:@"SYLJQRCode.bundle"];
+    NSLog(@"--------------%@",b);
+    NSString *bundlePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"SYLJQRCode.bundle"];
+    NSString *c = [NSBundle pathForScaledResource:@"juxingjiaoleftup" ofType:@"png" inDirectory: bundlePath];
+    NSLog(@"##############%@",c);
+    
+    NSLog(@"wangxiaochen----%@",nStr);
 }
 
 - (void)setupNavigationController
