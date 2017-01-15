@@ -8,10 +8,14 @@
 
 #import "SYLJScanQRCodeViewController.h"
 #import "SYLJScannerBorderView.h"
-#import "NSString+SYLJAdd.h"
 #import "NSBundle+SYLJAdd.h"
+#import "SYLJMacro.h"
+
+#define KScannerWidth 280
 
 @interface SYLJScanQRCodeViewController ()
+
+@property (nonatomic, weak) UIView *scannerBorderView;
 
 @end
 
@@ -23,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor grayColor];
     
     [self setupNavigationController];
     [self setupUI];
@@ -31,26 +35,37 @@
 
 - (void)setupUI
 {
-    SYLJScannerBorderView *scannerBorderView = [[SYLJScannerBorderView alloc] init];
-    scannerBorderView.frame = CGRectMake(100, 200, 100, 100);
-    [self.view addSubview:scannerBorderView];
-    
-    NSString *str = @"juxingjiaoleftup.png";
-    NSString *nStr = [str stringByAppendingPathScale:2];
-    
-    NSString *b = [[NSBundle mainBundle] pathForScaledResource:@"juxingjiaoleftup" ofType:@"png" inDirectory:@"SYLJQRCode.bundle"];
-    NSLog(@"--------------%@",b);
-    NSString *bundlePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"SYLJQRCode.bundle"];
-    NSString *c = [NSBundle pathForScaledResource:@"juxingjiaoleftup" ofType:@"png" inDirectory: bundlePath];
-    NSLog(@"##############%@",c);
-    
-    NSLog(@"wangxiaochen----%@",nStr);
+    [self setupScannerBorderView];
+    [self setupTipLabel];
 }
 
 - (void)setupNavigationController
 {
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(closeBtnClick)];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor orangeColor];
+}
+
+- (void)setupScannerBorderView
+{
+    CGFloat scannerBorderViewX = (kScreenWidth - KScannerWidth) * 0.5;
+    CGFloat scannerBorderViewY = (kScreenHeight - KScannerWidth) * 0.5;
+    CGFloat scannerBorderViewW = KScannerWidth;
+    CGFloat scannerBorderViewH = KScannerWidth;
+    SYLJScannerBorderView *scannerBorderView = [[SYLJScannerBorderView alloc] initWithFrame:CGRectMake(scannerBorderViewX, scannerBorderViewY, scannerBorderViewW, scannerBorderViewH)];
+    [self.view addSubview:scannerBorderView];
+    self.scannerBorderView = scannerBorderView;
+}
+
+- (void)setupTipLabel
+{
+    UILabel *tipLabel = [[UILabel alloc] init];
+    tipLabel.textColor = [UIColor whiteColor];
+    tipLabel.font = [UIFont systemFontOfSize:18];
+    tipLabel.text = @"将二维码/条码放入框中，即可自动扫描";
+    tipLabel.textAlignment = NSTextAlignmentCenter;
+    tipLabel.frame = CGRectMake(0, CGRectGetMaxY(self.scannerBorderView.frame) + 10, kScreenWidth, [UIFont systemFontOfSize:18].lineHeight);
+    
+    [self.view addSubview:tipLabel];
 }
 
 - (void)closeBtnClick
