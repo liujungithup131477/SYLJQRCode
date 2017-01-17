@@ -75,7 +75,7 @@
 - (void)setupUI
 {
     self.clipsToBounds = YES;
-    [self setupBgView];
+//    [self setupBgView];
     [self setupScannerLine];
     [self setupCornerView];
 }

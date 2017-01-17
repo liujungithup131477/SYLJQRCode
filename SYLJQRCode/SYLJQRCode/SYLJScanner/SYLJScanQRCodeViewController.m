@@ -10,10 +10,12 @@
 #import "SYLJScannerBorderView.h"
 #import "NSBundle+SYLJAdd.h"
 #import "SYLJMacro.h"
+#import "SYLJScanner.h"
 
 @interface SYLJScanQRCodeViewController ()
 
-@property (nonatomic, weak) UIView *scannerBorderView;
+@property (nonatomic, weak) SYLJScannerBorderView *scannerBorderView;
+@property (nonatomic, strong) SYLJScanner *scanner;
 
 @end
 
@@ -24,10 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor grayColor];
-    
     [self setupNavigationController];
     [self setupUI];
+    [self setupScanner];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,6 +76,35 @@
 - (void)closeBtnClick
 {
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+/** 创建扫描器 */
+- (void)setupScanner
+{
+    __weak typeof(self) weakSelf = self;
+    self.scanner = [SYLJScanner scanQRCodeWithScanView:self.view scanRect:self.scannerBorderView.frame completion:^(NSString *stringValue) {
+        // 完成回调
+//        weakSelf.completionCallBack(stringValue);
+        NSLog(@"%@",stringValue);
+        // 关闭
+        [weakSelf closeBtnClick];
+    }];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.scannerBorderView startScannerAnimating];
+    [self.scanner startScan];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self.scannerBorderView stopScannerAnimating];
+    [self.scanner stopScan];
 }
 
 @end

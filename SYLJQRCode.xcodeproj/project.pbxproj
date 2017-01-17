@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		81B006DD18EF3CBEFCC43B39 /* libPods-SYLJQRCode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6390BD9EDFD12DE93A609767 /* libPods-SYLJQRCode.a */; };
+		852115F61E2B458F00CBAE8A /* SYLJScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 852115F51E2B458F00CBAE8A /* SYLJScanner.m */; };
 		852772DB1E28B82500597B62 /* UIFont+SYLJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 852772CF1E28B82500597B62 /* UIFont+SYLJAdd.m */; };
 		852772DC1E28B82500597B62 /* UILabel+SYLJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 852772D11E28B82500597B62 /* UILabel+SYLJAdd.m */; };
 		852772DD1E28B82500597B62 /* SYLJQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 852772D31E28B82500597B62 /* SYLJQRCode.bundle */; };
@@ -27,6 +28,8 @@
 /* Begin PBXFileReference section */
 		57AA9E13C15E43666C59DEB9 /* Pods-SYLJQRCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYLJQRCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-SYLJQRCode/Pods-SYLJQRCode.release.xcconfig"; sourceTree = "<group>"; };
 		6390BD9EDFD12DE93A609767 /* libPods-SYLJQRCode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SYLJQRCode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		852115F41E2B458F00CBAE8A /* SYLJScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJScanner.h; sourceTree = "<group>"; };
+		852115F51E2B458F00CBAE8A /* SYLJScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJScanner.m; sourceTree = "<group>"; };
 		852772CE1E28B82500597B62 /* UIFont+SYLJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SYLJAdd.h"; sourceTree = "<group>"; };
 		852772CF1E28B82500597B62 /* UIFont+SYLJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+SYLJAdd.m"; sourceTree = "<group>"; };
 		852772D01E28B82500597B62 /* UILabel+SYLJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SYLJAdd.h"; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				85B70DBE1E28D8AF0036327A /* SYLJQRCodeNavigationController.m */,
 				85B70DC01E28F77D0036327A /* SYLJScannerBorderView.h */,
 				85B70DC11E28F77D0036327A /* SYLJScannerBorderView.m */,
+				852115F41E2B458F00CBAE8A /* SYLJScanner.h */,
+				852115F51E2B458F00CBAE8A /* SYLJScanner.m */,
 			);
 			path = SYLJScanner;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				852772DF1E28B82500597B62 /* SYLJScanQRCodeViewController.m in Sources */,
 				85E455521E24892D00F3AC6E /* main.m in Sources */,
 				85B70DC21E28F77D0036327A /* SYLJScannerBorderView.m in Sources */,
+				852115F61E2B458F00CBAE8A /* SYLJScanner.m in Sources */,
 				85B70DC81E2A1A220036327A /* NSBundle+SYLJAdd.m in Sources */,
 				85B70DCB1E2A22D00036327A /* NSString+SYLJAdd.m in Sources */,
 			);
