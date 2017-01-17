@@ -15,7 +15,7 @@
 @interface SYLJScanner () <AVCaptureMetadataOutputObjectsDelegate>
 
 @property (nonatomic, copy) void (^completionCallBack)(NSString *stringValue);
-@property (nonatomic, weak) UIView *parentView;
+@property (nonatomic, weak) UIView *scanView;
 /** 拍摄回话 */
 @property (nonatomic, strong) AVCaptureSession *session;
 // 预览图层
@@ -31,6 +31,8 @@
 
 @implementation SYLJScanner
 
+#pragma mark - 
+#pragma mark - Creat SYLJScanner
 + (instancetype)scanQRCodeWithScanView:(UIView *)scanView scanRect:(CGRect)scanRect completion:(void (^)(NSString *stringValue))completion
 {
     NSAssert(completion != nil, @"必须传入完成回调");
@@ -44,7 +46,7 @@ completion:(void (^)(NSString *stringValue))completion
     self = [super init];
     if (self != nil) {
         self.completionCallBack = completion;
-        self.parentView = scanView;
+        self.scanView = scanView;
         self.scanFrame = scanRect;
         
         [self setupSession];
@@ -52,13 +54,17 @@ completion:(void (^)(NSString *stringValue))completion
     return self;
 }
 
+#pragma mark - 
+#pragma mark - Setup scanner
 /**
  设置扫描会话
  */
 - (void)setupSession
 {
     // 输入设备
+    //AVCaptureDevice表示提供实时输入媒体数据（例如视频和音频）的物理设备。
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    //AVCaptureDeviceInput是AVCaptureInput的一个具体子类，它提供了一个从AVCaptureDevice捕获媒体的接口。
     AVCaptureDeviceInput *videoInput = [[AVCaptureDeviceInput alloc] initWithDevice:device error:NULL];
     if (videoInput == nil) {
         NSLog(@"创建输入设备失败");
@@ -66,9 +72,12 @@ completion:(void (^)(NSString *stringValue))completion
     }
     
     // 数据输出
+    //AVCaptureOutput是一个抽象类，定义了AVCaptureSession的输出目标的接口。
+    //AVCaptureMetadataOutput是AVCaptureOutput的一个具体子类，可用于处理来自附加连接的元数据对象。
     AVCaptureMetadataOutput *dataOutput = [[AVCaptureMetadataOutput alloc] init];
     
     // 拍摄会话 - 判断能够添加设备
+    //AVCaptureSession是AVFoundation捕获类的中心枢纽。
     self.session = [[AVCaptureSession alloc] init];
     if (![self.session canAddInput:videoInput]) {
         NSLog(@"无法添加输入设备");
@@ -86,6 +95,8 @@ completion:(void (^)(NSString *stringValue))completion
     [self.session addOutput:dataOutput];
     
     // 设置扫描类型
+    //metadataObjectTypes:指定接收方应向客户端呈现的元数据对象的类型。
+    //availableMetadataObjectTypes:表示接收器支持的元数据对象类型。
     dataOutput.metadataObjectTypes = dataOutput.availableMetadataObjectTypes;
     [dataOutput setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
     
@@ -98,8 +109,8 @@ completion:(void (^)(NSString *stringValue))completion
  */
 - (void)setupLayers
 {
-    if (self.parentView == nil) {
-        NSLog(@"父视图不存在");
+    if (self.scanView == nil) {
+        NSLog(@"扫描视图不存在");
         return;
     }
     
@@ -110,18 +121,24 @@ completion:(void (^)(NSString *stringValue))completion
     
     // 绘制图层
     CALayer *drawLayer = [CALayer layer];
-    drawLayer.frame = self.parentView.bounds;
-    [self.parentView.layer insertSublayer:drawLayer atIndex:0];
+    drawLayer.frame = self.scanView.bounds;
+    [self.scanView.layer insertSublayer:drawLayer atIndex:0];
     self.drawLayer = drawLayer;
     
     // 预览图层
+    //CoreAnimation层子类，用于预览AVCaptureSession的视觉输出。
     AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
+    //定义视频在AVCaptureVideoPreviewLayer中如何显示的字符串。
+    //AVLayerVideoGravityResizeAspectFill:保持宽高比; 填充层边界。
+    //在设置AVPlayerLayer或AVCaptureVideoPreviewLayer实例的videoGravity属性时，可以使用AVLayerVideoGravityResizeAspectFill。
     previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    previewLayer.frame = self.parentView.bounds;
-    [self.parentView.layer insertSublayer:previewLayer atIndex:0];
+    previewLayer.frame = self.scanView.bounds;
+    [self.scanView.layer insertSublayer:previewLayer atIndex:0];
     self.previewLayer = previewLayer;
 }
 
+#pragma mark - 
+#pragma mark - Public methods
 - (void)startScan
 {
     if ([self.session isRunning]) return;
@@ -138,7 +155,6 @@ completion:(void (^)(NSString *stringValue))completion
 }
 
 #pragma mark - <AVCaptureMetadataOutputObjectsDelegate>
-
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
     [self clearDrawLayer];
@@ -166,6 +182,8 @@ completion:(void (^)(NSString *stringValue))completion
     }
 }
 
+#pragma mark - 
+#pragma mark - Pravite methods
 /**
  清空绘制图层
  */
