@@ -15,6 +15,7 @@
 
 @interface SYLJScanQRCodeViewController ()
 
+@property (nonatomic, copy) void (^completionCallBack)(NSString *stringValue);
 @property (nonatomic, weak) SYLJScannerBorderView *scannerBorderView;
 @property (nonatomic, strong) SYLJScanner *scanner;
 
@@ -24,12 +25,37 @@
 
 #pragma mark -
 #pragma mark - Life cycle methods
+- (instancetype)initWithCompletion:(void (^)(NSString *stringValue))completion
+{
+    self = [super init];
+    if (self != nil) {
+        self.completionCallBack = completion;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setupNavigationController];
     [self setupUI];
     [self setupScanner];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.scannerBorderView startScannerAnimating];
+    [self.scanner startScan];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self.scannerBorderView stopScannerAnimating];
+    [self.scanner stopScan];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -92,27 +118,11 @@
     __weak typeof(self) weakSelf = self;
     self.scanner = [SYLJScanner scanQRCodeWithScanView:self.view scanRect:self.scannerBorderView.frame completion:^(NSString *stringValue) {
         // 完成回调
-//        weakSelf.completionCallBack(stringValue);
+        weakSelf.completionCallBack(stringValue);
         NSLog(@"%@",stringValue);
         // 关闭
         [weakSelf closeBtnClick];
     }];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    [self.scannerBorderView startScannerAnimating];
-    [self.scanner startScan];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    
-    [self.scannerBorderView stopScannerAnimating];
-    [self.scanner stopScan];
 }
 
 @end

@@ -14,5 +14,13 @@
  */
 @interface SYLJScanQRCodeViewController : UIViewController
 
+/**
+ 实例化扫描控制器
+ 
+ @param completion 完成回调
+ @return 扫描控制器
+ */
+- (instancetype)initWithCompletion:(void (^)(NSString *stringValue))completion;
+
 @end
 

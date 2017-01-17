@@ -19,7 +19,7 @@
 
 + (instancetype)scannerWithCompletion:(void (^)(NSString *))completion
 {
-//    NSAssert(completion, @"必须传入完成回调");
+    NSAssert(completion, @"必须传入完成回调");
     
     return [[self alloc] initWithCompletion:completion];
 }
@@ -27,7 +27,7 @@
 - (instancetype)initWithCompletion:(void (^)(NSString *))completion
 {
     if (self = [super init]) {
-        SYLJScanQRCodeViewController *scannerVc = [[SYLJScanQRCodeViewController alloc] init];
+        SYLJScanQRCodeViewController *scannerVc = [[SYLJScanQRCodeViewController alloc] initWithCompletion:completion];
         self.scannerVc = scannerVc;
         
         [self setTitle:@"扫一扫"

@@ -23,13 +23,16 @@
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     btn.frame = CGRectMake(100, 300, 100, 30);
     btn.backgroundColor = [UIColor purpleColor];
-    [btn addTarget:self action:@selector(scan) forControlEvents:UIControlEventTouchUpInside];
+    [btn addTarget:self action:@selector(scan:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
 }
 
-- (void)scan
+- (void)scan:(UIButton *)sender
 {
-    SYLJQRCodeNavigationController *scanQRNaV = [SYLJQRCodeNavigationController scannerWithCompletion:nil];
+    SYLJQRCodeNavigationController *scanQRNaV = [SYLJQRCodeNavigationController scannerWithCompletion:^(NSString * _Nonnull stringValue) {
+        NSLog(@"扫描结果: %@", stringValue);
+        [sender setTitle:stringValue forState:UIControlStateNormal];
+    }];
     [self presentViewController:scanQRNaV animated:YES completion:NULL];
 }
 

@@ -14,7 +14,7 @@
 
 @interface SYLJScanner () <AVCaptureMetadataOutputObjectsDelegate>
 
-@property (nonatomic, weak) void (^completionCallBack)(NSString *stringValue);
+@property (nonatomic, copy) void (^completionCallBack)(NSString *stringValue);
 @property (nonatomic, weak) UIView *parentView;
 /** 拍摄回话 */
 @property (nonatomic, strong) AVCaptureSession *session;

@@ -27,6 +27,14 @@
     return self;
 }
 
+- (void)setupUI
+{
+    self.clipsToBounds = YES;
+    //    [self setupBgView];
+    [self setupScannerLine];
+    [self setupCornerView];
+}
+
 #pragma mark - 
 #pragma mark - Public methods
 - (void)startScannerAnimating
@@ -72,14 +80,6 @@
 
 #pragma mark - 
 #pragma mark - Pravite methods (setup View)
-- (void)setupUI
-{
-    self.clipsToBounds = YES;
-//    [self setupBgView];
-    [self setupScannerLine];
-    [self setupCornerView];
-}
-
 - (void)setupBgView
 {
     [self addSubview:self.bgView];

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  扫描遮罩视图
@@ -24,3 +25,5 @@
 + (instancetype)maskViewWithFrame:(CGRect)frame cropRect:(CGRect)cropRect;
 
 @end
+
+NS_ASSUME_NONNULL_END
