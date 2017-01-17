@@ -11,6 +11,7 @@
 #import "NSBundle+SYLJAdd.h"
 #import "SYLJMacro.h"
 #import "SYLJScanner.h"
+#import "SYLJScannerMaskView.h"
 
 @interface SYLJScanQRCodeViewController ()
 
@@ -41,6 +42,7 @@
 - (void)setupUI
 {
     [self setupScannerBorderView];
+    [self setupScannerMaskView];
     [self setupTipLabel];
 }
 
@@ -71,6 +73,12 @@
     tipLabel.frame = CGRectMake(0, CGRectGetMaxY(self.scannerBorderView.frame) + 10, kScreenWidth, [UIFont systemFontOfSize:18].lineHeight);
     
     [self.view addSubview:tipLabel];
+}
+
+- (void)setupScannerMaskView
+{
+    SYLJScannerMaskView *maskView = [SYLJScannerMaskView maskViewWithFrame:self.view.bounds cropRect:self.scannerBorderView.frame];
+    [self.view insertSubview:maskView atIndex:0];
 }
 
 - (void)closeBtnClick

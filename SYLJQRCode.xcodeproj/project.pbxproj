@@ -17,6 +17,7 @@
 		85B70DC21E28F77D0036327A /* SYLJScannerBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B70DC11E28F77D0036327A /* SYLJScannerBorderView.m */; };
 		85B70DC81E2A1A220036327A /* NSBundle+SYLJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B70DC71E2A1A220036327A /* NSBundle+SYLJAdd.m */; };
 		85B70DCB1E2A22D00036327A /* NSString+SYLJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B70DCA1E2A22D00036327A /* NSString+SYLJAdd.m */; };
+		85CA35D61E2DB85C008AB4C1 /* SYLJScannerMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CA35D51E2DB85C008AB4C1 /* SYLJScannerMaskView.m */; };
 		85E455521E24892D00F3AC6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455511E24892D00F3AC6E /* main.m */; };
 		85E455551E24892D00F3AC6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455541E24892D00F3AC6E /* AppDelegate.m */; };
 		85E455581E24892D00F3AC6E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E455571E24892D00F3AC6E /* ViewController.m */; };
@@ -46,6 +47,8 @@
 		85B70DC71E2A1A220036327A /* NSBundle+SYLJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SYLJAdd.m"; sourceTree = "<group>"; };
 		85B70DC91E2A22D00036327A /* NSString+SYLJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SYLJAdd.h"; sourceTree = "<group>"; };
 		85B70DCA1E2A22D00036327A /* NSString+SYLJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SYLJAdd.m"; sourceTree = "<group>"; };
+		85CA35D41E2DB85C008AB4C1 /* SYLJScannerMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJScannerMaskView.h; sourceTree = "<group>"; };
+		85CA35D51E2DB85C008AB4C1 /* SYLJScannerMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJScannerMaskView.m; sourceTree = "<group>"; };
 		85E4554D1E24892D00F3AC6E /* SYLJQRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYLJQRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E455511E24892D00F3AC6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		85E455531E24892D00F3AC6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				85B70DC11E28F77D0036327A /* SYLJScannerBorderView.m */,
 				852115F41E2B458F00CBAE8A /* SYLJScanner.h */,
 				852115F51E2B458F00CBAE8A /* SYLJScanner.m */,
+				85CA35D41E2DB85C008AB4C1 /* SYLJScannerMaskView.h */,
+				85CA35D51E2DB85C008AB4C1 /* SYLJScannerMaskView.m */,
 			);
 			path = SYLJScanner;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 				852115F61E2B458F00CBAE8A /* SYLJScanner.m in Sources */,
 				85B70DC81E2A1A220036327A /* NSBundle+SYLJAdd.m in Sources */,
 				85B70DCB1E2A22D00036327A /* NSString+SYLJAdd.m in Sources */,
+				85CA35D61E2DB85C008AB4C1 /* SYLJScannerMaskView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
