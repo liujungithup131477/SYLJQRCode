@@ -227,6 +227,7 @@ completion:(void (^)(NSString *stringValue))completion
     
     // 移动到第一个点
     NSInteger index = 0;
+    //从`dict'的内容创建一个CGPoint（可能返回早先存储在'CGPointCreateDictionaryRepresentation'中的值）并存储的值“点”。 成功返回true; 否则为假。
     CGPointMakeWithDictionaryRepresentation((CFDictionaryRef)corners[index++], &point);
     [path moveToPoint:point];
     // 遍历剩余的点
