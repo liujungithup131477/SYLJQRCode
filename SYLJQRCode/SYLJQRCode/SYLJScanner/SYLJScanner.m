@@ -45,6 +45,7 @@ completion:(void (^)(NSString *stringValue))completion
     if (self != nil) {
         self.completionCallBack = completion;
         self.parentView = scanView;
+        self.scanFrame = scanRect;
         
         [self setupSession];
     }
