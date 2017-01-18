@@ -29,6 +29,8 @@
 //    [btn addTarget:self action:@selector(scan:) forControlEvents:UIControlEventTouchUpInside];
 //    [self.view addSubview:btn];
     
+    self.view.backgroundColor = [UIColor orangeColor];
+    
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
     label.text = @"扫一扫";
     label.backgroundColor = [UIColor purpleColor];
@@ -49,7 +51,8 @@
         NSLog(@"扫描结果: %@", stringValue);
         self.label.text = stringValue;
     }];
-    [self presentViewController:scanQRNaV animated:YES completion:NULL];
+    
+    [self showDetailViewController:scanQRNaV sender:nil];
 }
 
 - (void)didReceiveMemoryWarning {

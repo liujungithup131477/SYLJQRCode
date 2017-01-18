@@ -13,6 +13,9 @@
 #import "SYLJScanner.h"
 #import "SYLJScannerMaskView.h"
 
+/// 控件间距
+#define kControlMargin  32.0
+
 @interface SYLJScanQRCodeViewController ()
 
 @property (nonatomic, copy) void (^completionCallBack)(NSString *stringValue);
@@ -75,7 +78,7 @@
 - (void)setupNavigationController
 {
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(closeBtnClick)];
-    self.navigationItem.leftBarButtonItem.tintColor = [UIColor orangeColor];
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor greenColor];
 }
 
 - (void)setupScannerBorderView
@@ -93,10 +96,11 @@
 {
     UILabel *tipLabel = [[UILabel alloc] init];
     tipLabel.textColor = [UIColor whiteColor];
-    tipLabel.font = [UIFont systemFontOfSize:18];
+    tipLabel.font = [UIFont systemFontOfSize:12];
     tipLabel.text = @"将二维码/条码放入框中，即可自动扫描";
     tipLabel.textAlignment = NSTextAlignmentCenter;
-    tipLabel.frame = CGRectMake(0, CGRectGetMaxY(self.scannerBorderView.frame) + 10, kScreenWidth, [UIFont systemFontOfSize:18].lineHeight);
+    [tipLabel sizeToFit];
+    tipLabel.center = CGPointMake(self.scannerBorderView.center.x, CGRectGetMaxY(self.scannerBorderView.frame) + kControlMargin);
     
     [self.view addSubview:tipLabel];
 }
