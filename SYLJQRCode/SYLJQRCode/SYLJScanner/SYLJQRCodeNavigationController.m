@@ -67,4 +67,9 @@
     self.scannerVc.title = title;
 }
 
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 @end
