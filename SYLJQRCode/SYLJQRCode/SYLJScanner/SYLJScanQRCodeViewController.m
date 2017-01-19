@@ -78,6 +78,7 @@
 - (void)setupNavigationController
 {
     [self prepareNavigationBar];
+    self.navigationController.navigationBar.translucent = YES;
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(closeBtnClick)];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor greenColor];
@@ -89,7 +90,7 @@
     UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
     CGContextRef context = UIGraphicsGetCurrentContext();
     [[UIColor whiteColor] setFill];
-    CGContextAddRect(context, CGRectMake(0, 0, size.width, 1));
+    CGContextAddRect(context, CGRectMake(0, 0, size.width, 1));  //向上下文的路径添加单个rect。
     CGContextDrawPath(context, kCGPathFill); //使用绘图模式`mode'绘制上下文的路径。
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -97,7 +98,7 @@
     self.navigationController.navigationBar.shadowImage = image;
     
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(size.width, size.width+20), NO, [UIScreen mainScreen].scale);
-    [[UIColor redColor] setFill];
+    [[UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.9] setFill];
     CGContextAddRect(UIGraphicsGetCurrentContext(), CGRectMake(0, 0, size.width, size.height+20));
     CGContextDrawPath(UIGraphicsGetCurrentContext(), kCGPathFill);
     UIImage *simage = UIGraphicsGetImageFromCurrentImageContext();
