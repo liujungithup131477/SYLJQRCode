@@ -77,8 +77,33 @@
 
 - (void)setupNavigationController
 {
+    [self prepareNavigationBar];
+    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(closeBtnClick)];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor greenColor];
+}
+
+- (void)prepareNavigationBar
+{
+    CGSize size = self.navigationController.navigationBar.frame.size;
+    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [[UIColor whiteColor] setFill];
+    CGContextAddRect(context, CGRectMake(0, 0, size.width, 1));
+    CGContextDrawPath(context, kCGPathFill); //使用绘图模式`mode'绘制上下文的路径。
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.navigationController.navigationBar.shadowImage = image;
+    
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(size.width, size.width+20), NO, [UIScreen mainScreen].scale);
+    [[UIColor redColor] setFill];
+    CGContextAddRect(UIGraphicsGetCurrentContext(), CGRectMake(0, 0, size.width, size.height+20));
+    CGContextDrawPath(UIGraphicsGetCurrentContext(), kCGPathFill);
+    UIImage *simage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    [self.navigationController.navigationBar setBackgroundImage:simage forBarMetrics:UIBarMetricsDefault];
+//    self.navigationController.navigationBar.shadowImage = [UIImage new];
 }
 
 - (void)setupScannerBorderView
