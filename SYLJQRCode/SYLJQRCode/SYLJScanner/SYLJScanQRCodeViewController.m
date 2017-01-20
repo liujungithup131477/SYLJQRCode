@@ -12,6 +12,7 @@
 #import "SYLJMacro.h"
 #import "SYLJScanner.h"
 #import "SYLJScannerMaskView.h"
+#import "SYLJGenerateQRCodeViewController.h"
 
 /// 控件间距
 #define kControlMargin  32.0
@@ -82,6 +83,9 @@
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(closeBtnClick)];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor greenColor];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"我的名片" style:UIBarButtonItemStylePlain target:self action:@selector(clickCardButton)];
+    self.navigationItem.rightBarButtonItem.tintColor = [UIColor greenColor];
 }
 
 - (void)prepareNavigationBar
@@ -140,6 +144,13 @@
 - (void)closeBtnClick
 {
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)clickCardButton
+{
+    SYLJGenerateQRCodeViewController *generateQRCode = [[SYLJGenerateQRCodeViewController alloc] initWithCardName:@"junliu" avatar:[UIImage imageNamed:@"avatar"]];
+    
+    [self showViewController:generateQRCode sender:nil];
 }
 
 /** 创建扫描器 */
