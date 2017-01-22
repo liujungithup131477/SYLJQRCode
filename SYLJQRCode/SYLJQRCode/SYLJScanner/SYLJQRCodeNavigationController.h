@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /*!
  二维码导航控制器
  
@@ -40,7 +38,17 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SYLJQRCodeNavigationController : UINavigationController
 
 /**
- 实例化扫描导航控制器
+ 使用 `名片字符串` 实例化扫描导航控制器（适合访问照片库中的二维码）
+ 
+ @param cardName 名片字符串
+ @param avatar 头像图像
+ @param completion 完成回调
+ @return 扫描导航控制器
+ */
++ (instancetype)scannerWithCardName:(NSString *)cardName avatar:(UIImage *)avatar completion:(void (^)(NSString *stringValue))completion;
+
+/**
+ 实例化扫描导航控制器 (此方式只适用于二维码扫描，不适合访问照片库中的二维码)
  
  @param completion 完成回调
  @return 扫描导航控制器
@@ -53,7 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param titleColor 标题颜色(默认是白色)
  @param barTintColor 主题色(默认是红色)
  */
-- (void)setTitleColor:(nullable UIColor *)titleColor barTintColor:(nullable UIColor *)barTintColor;
+- (void)setTitleColor:(UIColor *)titleColor barTintColor:(UIColor *)barTintColor;
 
 /**
  设置导航栏标题、标题颜色和主题色
@@ -62,8 +70,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param titleColor 标题颜色(默认是白色)
  @param barTintColor 主题色(默认是红色)
  */
-- (void)setTitle:(nullable NSString *)title titleColor:(nullable UIColor *)titleColor barTintColor:(nullable UIColor *)barTintColor;
+- (void)setTitle:(NSString *)title titleColor:(UIColor *)titleColor barTintColor:(UIColor *)barTintColor;
 
 @end
-
-NS_ASSUME_NONNULL_END

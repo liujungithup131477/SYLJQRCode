@@ -11,48 +11,29 @@
 
 @interface ViewController ()
 
-@property (nonatomic, weak) UILabel *label;
+@property (weak, nonatomic) IBOutlet UILabel *tipLabel;
+@property (nonatomic, weak) UIImageView *avatarImg;
 
 @end
 
 @implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [btn setTitle:@"扫一扫" forState:UIControlStateNormal];
-//    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//    btn.frame = CGRectMake(0, 0, 300, 300);
-//    btn.center = self.view.center;
-//    btn.backgroundColor = [UIColor purpleColor];
-//    [btn addTarget:self action:@selector(scan:) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:btn];
-    
-    self.view.backgroundColor = [UIColor orangeColor];
-    
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
-    label.text = @"扫一扫";
-    label.backgroundColor = [UIColor purpleColor];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor whiteColor];
-    label.numberOfLines = 0;
-    label.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scan:)];
-    [label addGestureRecognizer:tap];
-    label.center = self.view.center;
-    [self.view addSubview:label];
-    self.label = label;
-}
-
-- (void)scan:(UITapGestureRecognizer *)sender
+- (IBAction)scan:(UIBarButtonItem *)sender
 {
-    SYLJQRCodeNavigationController *scanQRNaV = [SYLJQRCodeNavigationController scannerWithCompletion:^(NSString * _Nonnull stringValue) {
+    SYLJQRCodeNavigationController *scanQRNaV = [SYLJQRCodeNavigationController scannerWithCardName:@"何亮" avatar:[UIImage imageNamed:@"psb"] completion:^(NSString *stringValue) {
         NSLog(@"扫描结果: %@", stringValue);
-        self.label.text = stringValue;
+        self.tipLabel.text = stringValue;
     }];
     
     [self showDetailViewController:scanQRNaV sender:nil];
+    
+    
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor orangeColor];
+
 }
 
 - (void)didReceiveMemoryWarning {

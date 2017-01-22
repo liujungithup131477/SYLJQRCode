@@ -32,7 +32,7 @@
 @implementation SYLJScanner
 
 #pragma mark - 
-#pragma mark - Creat SYLJScanner
+#pragma mark - 扫描二维码
 + (instancetype)scanQRCodeWithScanView:(UIView *)scanView scanRect:(CGRect)scanRect completion:(void (^)(NSString *stringValue))completion
 {
     NSAssert(completion != nil, @"必须传入完成回调");
@@ -54,7 +54,6 @@ completion:(void (^)(NSString *stringValue))completion
     return self;
 }
 
-#pragma mark - 
 #pragma mark - Setup scanner
 /**
  设置扫描会话
@@ -137,7 +136,6 @@ completion:(void (^)(NSString *stringValue))completion
     self.previewLayer = previewLayer;
 }
 
-#pragma mark - 
 #pragma mark - Public methods
 - (void)startScan
 {
@@ -182,7 +180,6 @@ completion:(void (^)(NSString *stringValue))completion
     }
 }
 
-#pragma mark - 
 #pragma mark - Pravite methods
 /**
  清空绘制图层
@@ -239,6 +236,46 @@ completion:(void (^)(NSString *stringValue))completion
     [path closePath];
     
     return path.CGPath;
+}
+
+#pragma mark - 
+#pragma mark - 扫描图片
++ (void)scanImage:(UIImage *)image completion:(void (^)(NSArray *values))completion
+{
+    /*
+     一种识别静态图像或视频中的显着特征（例如面部和条形码）的图像处理器。
+     CIDetector对象使用图像处理来搜索和识别静止图像或视频中的显着特征（面部，矩形和条形码）。 检测到的功能由提供有关每个功能的详细信息的CIFeature对象表示。
+     这个类可以维护许多可能影响性能的状态变量。 因此为了获得最佳性能，重用CIDetector实例而不是创建新的实例。
+     */
+    /*
+     创建并返回已配置的检测器。
+     CIDetector对象可以潜在地创建和保存大量的资源。 在可能的情况下，重用相同的CIDetector实例。 此外，当使用检测器对象处理图像时，如果用于初始化检测器的CIContext与用于处理CIImage对象的上下文相同，则应用程序的性能会更好。
+     参数
+     type(类型)
+     表示您感兴趣的检测器种类的字符串。请参见检测器类型。
+     CIDetectorTypeQRCode:
+     检测器，用于在静止图像或视频中搜索快速响应代码（2D条形码类型），返回提供有关检测到的条形码信息的CIQRCodeFeature对象。
+     context(上下文)
+     检测器在分析图像时可以使用的Core Image上下文。
+     options(选项)
+     包含有关如何配置检测器的详细信息的字典。 请参阅检测器配置键。
+     CIDetectorAccuracy (key): 用于指定检测器所需精度的值选项。
+     CIDetectorAccuracyLow (value): 表示检测器应选择精度较低但可以更快处理的技术。
+     CIDetectorAccuracyHigh (value): 表示检测器应选择精度较高的技术，即使它需要更多的处理时间。
+     返回
+     配置的探测器。
+     */
+    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:@{CIDetectorAccuracy : CIDetectorAccuracyHigh}];
+    CIImage *ciimage = [[CIImage alloc] initWithImage:image];
+    NSArray *features = [detector featuresInImage:ciimage];
+    NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:features.count];
+    for (CIQRCodeFeature *qrFeature in features) {
+        [tempArray addObject:qrFeature.messageString];
+    }
+    
+    if (completion) {
+        completion(tempArray.copy);
+    }
 }
 
 @end

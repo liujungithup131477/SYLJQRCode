@@ -16,12 +16,17 @@
 
 /// 控件间距
 #define kControlMargin  32.0
+/// 相册图片最大尺寸
+#define kImageMaxSize   CGSizeMake(1000, 1000)
 
-@interface SYLJScanQRCodeViewController ()
+@interface SYLJScanQRCodeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (nonatomic, copy) void (^completionCallBack)(NSString *stringValue);
 @property (nonatomic, weak) SYLJScannerBorderView *scannerBorderView;
 @property (nonatomic, strong) SYLJScanner *scanner;
+@property (nonatomic, weak) UILabel *tipLabel;
+@property (nonatomic, strong) NSString *cardName;
+@property (nonatomic, strong) UIImage *avatar;
 
 @end
 
@@ -33,6 +38,16 @@
 {
     self = [super init];
     if (self != nil) {
+        self.completionCallBack = completion;
+    }
+    return self;
+}
+
+- (instancetype)initWithCardName:(NSString *)cardName avatar:(UIImage *)avatar completion:(void (^)(NSString *))completion {
+    self = [super init];
+    if (self) {
+        self.cardName = cardName;
+        self.avatar = avatar;
         self.completionCallBack = completion;
     }
     return self;
@@ -74,6 +89,7 @@
     [self setupScannerBorderView];
     [self setupScannerMaskView];
     [self setupTipLabel];
+    [self setupPostcard];
 }
 
 - (void)setupNavigationController
@@ -84,7 +100,7 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(closeBtnClick)];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor greenColor];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"我的名片" style:UIBarButtonItemStylePlain target:self action:@selector(clickCardButton)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"相册" style:UIBarButtonItemStylePlain target:self action:@selector(clickAlbumButton)];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor greenColor];
 }
 
@@ -133,12 +149,25 @@
     tipLabel.center = CGPointMake(self.scannerBorderView.center.x, CGRectGetMaxY(self.scannerBorderView.frame) + kControlMargin);
     
     [self.view addSubview:tipLabel];
+    self.tipLabel = tipLabel;
 }
 
 - (void)setupScannerMaskView
 {
     SYLJScannerMaskView *maskView = [SYLJScannerMaskView maskViewWithFrame:self.view.bounds cropRect:self.scannerBorderView.frame];
     [self.view insertSubview:maskView atIndex:0];
+}
+
+- (void)setupPostcard
+{
+    UIButton *cardBtn = [[UIButton alloc] init];
+    [cardBtn setTitle:@"我的名片" forState:UIControlStateNormal];
+    [cardBtn setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    [cardBtn sizeToFit];
+    cardBtn.center = CGPointMake(self.tipLabel.center.x, CGRectGetMaxY(self.tipLabel.frame) + kControlMargin);
+    [cardBtn addTarget:self action:@selector(clickCardButton) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:cardBtn];
 }
 
 - (void)closeBtnClick
@@ -148,9 +177,29 @@
 
 - (void)clickCardButton
 {
-    SYLJGenerateQRCodeViewController *generateQRCode = [[SYLJGenerateQRCodeViewController alloc] initWithCardName:@"junliu" avatar:[UIImage imageNamed:@"avatar"]];
+    SYLJGenerateQRCodeViewController *generateQRCode = [[SYLJGenerateQRCodeViewController alloc] initWithCardName:self.cardName avatar:self.avatar];
     
     [self showViewController:generateQRCode sender:nil];
+}
+
+/// 点击相册按钮
+- (void)clickAlbumButton {
+    
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:@"无法访问相册" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:NULL];
+        [alertController addAction:action];
+        [self presentViewController:alertController animated:YES completion:NULL];
+        return;
+    }
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    
+    picker.view.backgroundColor = [UIColor whiteColor];
+    picker.delegate = self;
+    
+    [self showDetailViewController:picker sender:nil];
 }
 
 /** 创建扫描器 */
@@ -165,5 +214,46 @@
         [weakSelf closeBtnClick];
     }];
 }
+
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    UIImage *image = [self resizeImage:info[UIImagePickerControllerOriginalImage]];
+    
+    [SYLJScanner scanImage:image completion:^(NSArray *values) {
+        if (values.count > 0) {
+            self.completionCallBack([values firstObject]);
+            [self dismissViewControllerAnimated:YES completion:^{
+                [self closeBtnClick];
+            }];
+        } else {
+            self.tipLabel.text = @"没有识别到二维码，请选择其他照片";
+            [self dismissViewControllerAnimated:YES completion:NULL];
+        }
+    }];
+}
+
+- (UIImage *)resizeImage:(UIImage *)image {
+    
+    if (image.size.width < kImageMaxSize.width && image.size.height < kImageMaxSize.height) {
+        return image;
+    }
+    
+    CGFloat xScale = kImageMaxSize.width / image.size.width;
+    CGFloat yScale = kImageMaxSize.height / image.size.height;
+    CGFloat scale = MIN(xScale, yScale);
+    CGSize size = CGSizeMake(image.size.width * scale, image.size.height * scale);
+    
+    UIGraphicsBeginImageContext(size);
+    
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    
+    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return result;
+}
+
 
 @end

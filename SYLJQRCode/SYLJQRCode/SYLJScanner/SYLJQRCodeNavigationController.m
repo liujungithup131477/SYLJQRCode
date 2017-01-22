@@ -17,11 +17,32 @@
 
 @implementation SYLJQRCodeNavigationController
 
++ (instancetype)scannerWithCardName:(NSString *)cardName avatar:(UIImage *)avatar completion:(void (^)(NSString *stringValue))completion
+{
+    NSAssert(completion != nil, @"必须传入完成回调");
+    
+    return [[self alloc] initWithCardName:cardName avatar:avatar completion:completion];
+}
+
 + (instancetype)scannerWithCompletion:(void (^)(NSString *))completion
 {
     NSAssert(completion, @"必须传入完成回调");
     
     return [[self alloc] initWithCompletion:completion];
+}
+
+- (instancetype)initWithCardName:(NSString *)cardName avatar:(UIImage *)avatar completion:(void (^)(NSString *))completion {
+    self = [super init];
+    if (self) {
+        SYLJScanQRCodeViewController *scanner = [[SYLJScanQRCodeViewController alloc] initWithCardName:cardName avatar:avatar completion:completion];
+        
+        [self setTitle:@"扫一扫"
+            titleColor:[UIColor whiteColor]
+          barTintColor:[UIColor redColor]];
+        
+        [self pushViewController:scanner animated:NO];
+    }
+    return self;
 }
 
 - (instancetype)initWithCompletion:(void (^)(NSString *))completion

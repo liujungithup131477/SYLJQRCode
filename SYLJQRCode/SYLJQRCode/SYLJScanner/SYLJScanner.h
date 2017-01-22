@@ -33,4 +33,10 @@
  */
 - (void)stopScan;
 
+/// 扫描图像
+///
+/// @param image 包含二维码的图像
+/// @remark 目前只支持 64 位的 iOS 设备
++ (void)scanImage:(UIImage *)image completion:(void (^)(NSArray *values))completion;
+
 @end
