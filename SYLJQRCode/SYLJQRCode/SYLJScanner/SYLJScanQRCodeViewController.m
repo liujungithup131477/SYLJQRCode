@@ -170,6 +170,8 @@
     [self.view addSubview:cardBtn];
 }
 
+#pragma mark - 
+#pragma mark - Action methods
 - (void)closeBtnClick
 {
     [self dismissViewControllerAnimated:YES completion:NULL];

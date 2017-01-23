@@ -20,25 +20,31 @@
  使用:
  
  @code
- NSString *cardName = @"一天一天";
- UIImage *avatar = [UIImage imageNamed:@"avatar"];
- 
  // 实例化控制器，并指定完成回调
- SYLJQRCodeNavigationController *scanQRNaV = [SYLJQRCodeNavigationController scannerWithCompletion:^(NSString * _Nonnull stringValue) {
- NSLog(@"扫描结果(URL): %@", stringValue);
- self.label.text = stringValue;
+ SYLJQRCodeNavigationController *scanQRNaV = [SYLJQRCodeNavigationController scannerWithCardName:@"何亮" avatar:[UIImage imageNamed:@"psb"] completion:^(NSString *stringValue) {
+ NSLog(@"扫描结果: %@", stringValue);
+ self.tipLabel.text = stringValue;
  }];
+ 
+ [self showDetailViewController:scanQRNaV sender:nil];
  
  // 展现扫描控制器
  [self showDetailViewController:scanner sender:nil];
  }];
  
  @endcode
+ 
+ @remark 生成二维码请使用 SYLJGenerateQRCode 类
+ [SYLJGenerateQRCode qrImageWithString:self.cardName avatar:self.avatar completion:^(UIImage *img) {
+ cardImageView.image = img;
+ [cardImageView sizeToFit];
+ cardImageView.center = self.view.center;
+ }];
  */
 @interface SYLJQRCodeNavigationController : UINavigationController
 
 /**
- 使用 `名片字符串` 实例化扫描导航控制器（适合访问照片库中的二维码）
+ 使用 `名片字符串` 实例化扫描导航控制器（可以访问照片库中的二维码）
  
  @param cardName 名片字符串
  @param avatar 头像图像
@@ -48,7 +54,7 @@
 + (instancetype)scannerWithCardName:(NSString *)cardName avatar:(UIImage *)avatar completion:(void (^)(NSString *stringValue))completion;
 
 /**
- 实例化扫描导航控制器 (此方式只适用于二维码扫描，不适合访问照片库中的二维码)
+ 实例化扫描导航控制器 (此方式只适用于二维码扫描，不能访问照片库中的二维码)
  
  @param completion 完成回调
  @return 扫描导航控制器

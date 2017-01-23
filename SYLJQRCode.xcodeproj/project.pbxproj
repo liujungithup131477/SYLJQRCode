@@ -13,7 +13,6 @@
 		852772DC1E28B82500597B62 /* UILabel+SYLJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 852772D11E28B82500597B62 /* UILabel+SYLJAdd.m */; };
 		852772DD1E28B82500597B62 /* SYLJQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 852772D31E28B82500597B62 /* SYLJQRCode.bundle */; };
 		852772DF1E28B82500597B62 /* SYLJScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852772D71E28B82500597B62 /* SYLJScanQRCodeViewController.m */; };
-		85B70DBF1E28D8AF0036327A /* SYLJQRCodeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B70DBE1E28D8AF0036327A /* SYLJQRCodeNavigationController.m */; };
 		85B70DC21E28F77D0036327A /* SYLJScannerBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B70DC11E28F77D0036327A /* SYLJScannerBorderView.m */; };
 		85B70DC81E2A1A220036327A /* NSBundle+SYLJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B70DC71E2A1A220036327A /* NSBundle+SYLJAdd.m */; };
 		85B70DCB1E2A22D00036327A /* NSString+SYLJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B70DCA1E2A22D00036327A /* NSString+SYLJAdd.m */; };
@@ -26,6 +25,7 @@
 		85E455601E24892D00F3AC6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E4555E1E24892D00F3AC6E /* LaunchScreen.storyboard */; };
 		85EB95CA1E31AE9B00DA500D /* SYLJGenerateQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EB95C91E31AE9B00DA500D /* SYLJGenerateQRCode.m */; };
 		85EB95CD1E31B2E900DA500D /* SYLJGenerateQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EB95CC1E31B2E900DA500D /* SYLJGenerateQRCodeViewController.m */; };
+		85EB95D31E3594E900DA500D /* SYLJQRCodeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EB95D21E3594E900DA500D /* SYLJQRCodeNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +41,6 @@
 		852772D61E28B82500597B62 /* SYLJScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJScanQRCodeViewController.h; sourceTree = "<group>"; };
 		852772D71E28B82500597B62 /* SYLJScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJScanQRCodeViewController.m; sourceTree = "<group>"; };
 		852772DA1E28B82500597B62 /* SYLJMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJMacro.h; sourceTree = "<group>"; };
-		85B70DBD1E28D8AF0036327A /* SYLJQRCodeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJQRCodeNavigationController.h; sourceTree = "<group>"; };
-		85B70DBE1E28D8AF0036327A /* SYLJQRCodeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJQRCodeNavigationController.m; sourceTree = "<group>"; };
 		85B70DC01E28F77D0036327A /* SYLJScannerBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJScannerBorderView.h; sourceTree = "<group>"; };
 		85B70DC11E28F77D0036327A /* SYLJScannerBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJScannerBorderView.m; sourceTree = "<group>"; };
 		85B70DC61E2A1A220036327A /* NSBundle+SYLJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SYLJAdd.h"; sourceTree = "<group>"; };
@@ -65,6 +63,8 @@
 		85EB95C91E31AE9B00DA500D /* SYLJGenerateQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJGenerateQRCode.m; sourceTree = "<group>"; };
 		85EB95CB1E31B2E900DA500D /* SYLJGenerateQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJGenerateQRCodeViewController.h; sourceTree = "<group>"; };
 		85EB95CC1E31B2E900DA500D /* SYLJGenerateQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJGenerateQRCodeViewController.m; sourceTree = "<group>"; };
+		85EB95D11E3594E900DA500D /* SYLJQRCodeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLJQRCodeNavigationController.h; sourceTree = "<group>"; };
+		85EB95D21E3594E900DA500D /* SYLJQRCodeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLJQRCodeNavigationController.m; sourceTree = "<group>"; };
 		9559F1132BBB9AA105ABC1F3 /* Pods-SYLJQRCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYLJQRCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SYLJQRCode/Pods-SYLJQRCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,10 +126,10 @@
 			isa = PBXGroup;
 			children = (
 				852772D31E28B82500597B62 /* SYLJQRCode.bundle */,
+				85EB95D11E3594E900DA500D /* SYLJQRCodeNavigationController.h */,
+				85EB95D21E3594E900DA500D /* SYLJQRCodeNavigationController.m */,
 				852772D61E28B82500597B62 /* SYLJScanQRCodeViewController.h */,
 				852772D71E28B82500597B62 /* SYLJScanQRCodeViewController.m */,
-				85B70DBD1E28D8AF0036327A /* SYLJQRCodeNavigationController.h */,
-				85B70DBE1E28D8AF0036327A /* SYLJQRCodeNavigationController.m */,
 				85B70DC01E28F77D0036327A /* SYLJScannerBorderView.h */,
 				85B70DC11E28F77D0036327A /* SYLJScannerBorderView.m */,
 				852115F41E2B458F00CBAE8A /* SYLJScanner.h */,
@@ -327,7 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85B70DBF1E28D8AF0036327A /* SYLJQRCodeNavigationController.m in Sources */,
+				85EB95D31E3594E900DA500D /* SYLJQRCodeNavigationController.m in Sources */,
 				85E455581E24892D00F3AC6E /* ViewController.m in Sources */,
 				852772DC1E28B82500597B62 /* UILabel+SYLJAdd.m in Sources */,
 				85EB95CD1E31B2E900DA500D /* SYLJGenerateQRCodeViewController.m in Sources */,

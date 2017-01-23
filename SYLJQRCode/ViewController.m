@@ -25,8 +25,6 @@
     }];
     
     [self showDetailViewController:scanQRNaV sender:nil];
-    
-    
 }
 
 - (void)viewDidLoad {
